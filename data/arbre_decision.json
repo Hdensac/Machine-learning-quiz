@@ -88,7 +88,7 @@
     "theme": "Arbres de Décision",
     "question": "L'indice de Gini est un critère utilisé pour :",
     "options": [
-      "A) Mesurer l'impureté d'un nœud (alternative à l'entropie)",
+      "A) Mesurer l'impureté d'un nœud ",
       "B) Calculer la corrélation linéaire",
       "C) Normaliser les données",
       "D) Éviter la division des nœuds"
@@ -269,7 +269,7 @@
     "question": "Que signifie l'hyperparamètre `min_samples_split` ?",
     "options": [
       "A) Le nombre minimum de feuilles dans l'arbre",
-      "B) Le nombre minimum d'exemples requis dans un nœud pour qu'il puisse être divisé",
+      "B) Le nombre minimum d'exemples requis dans un nœud ",
       "C) Le nombre minimum de variables à tester",
       "D) Le nombre d'exemples dans le jeu de test"
     ],
@@ -293,7 +293,7 @@
     "question": "Lequel de ces éléments est un avantage majeur des arbres de décision ?",
     "options": [
       "A) Ils sont insensibles à l'overfitting",
-      "B) Ils sont hautement interprétables et visualisables par l'humain",
+      "B) Ils sont  interprétables et visualisables par l'humain",
       "C) Ils sont toujours plus précis que les réseaux de neurones",
       "D) Ils nécessitent une quantité infinie de données"
     ],
@@ -305,7 +305,7 @@
     "question": "Les arbres de décision nécessitent-ils obligatoirement une mise à l'échelle (scaling/normalization) des variables ?",
     "options": [
       "A) Oui, c'est indispensable comme pour les SVM",
-      "B) Non, ils sont invariants aux transformations monotones des variables (le choix du split reste identique)",
+      "B) Non, ils sont invariants aux transformations monotones des variables",
       "C) Uniquement pour la classification binaire",
       "D) Oui, sinon l'algorithme ne converge pas"
     ],
@@ -317,7 +317,7 @@
     "question": "Quelle est la principale faiblesse d'un arbre de décision unique ?",
     "options": [
       "A) Il est impossible à coder",
-      "B) Il a une forte variance et est instable (une petite modification des données peut changer toute la structure)",
+      "B) Il a une forte variance et est instable ",
       "C) Il est trop lent lors des prédictions",
       "D) Il ne fonctionne pas sur des données textuelles"
     ],
@@ -329,7 +329,7 @@
     "question": "Dans un problème de régression, comment une feuille calcule-t-elle sa prédiction finale ?",
     "options": [
       "A) Elle prend la valeur maximale du dataset",
-      "B) Elle calcule la moyenne (ou la médiane) des valeurs cibles des exemples situés dans cette feuille",
+      "B) Elle calcule la moyenne/médiane des valeurs cibles des exemples situés dans cette feuille",
       "C) Elle effectue une régression linéaire multiple",
       "D) Elle choisit une valeur au hasard"
     ],
@@ -437,7 +437,7 @@
     "question": "Face à un problème non linéaire complexe, un arbre de décision nécessite généralement :",
     "options": [
       "A) Une transformation des données par un noyau (kernel)",
-      "B) Une profondeur plus élevée pour approximer la frontière complexe par paliers",
+      "B) Une profondeur plus élevée ",
       "C) D'être remplacé par une régression linéaire simple",
       "D) Moins de données qu'un problème linéaire"
     ],
@@ -473,9 +473,9 @@
     "question": "Que se passe-t-il si la valeur de `max_depth` est fixée à 1 ?",
     "options": [
       "A) L'arbre est complet et très performant",
-      "B) On obtient un 'Decision Stump' (souvent utilisé dans le boosting), le modèle est très simple (underfitting)",
-      "C) L'arbre ne fait aucune prédiction",
-      "D) Le modèle plante"
+      "B) On obtient un 'Decision Stump' qui est un arbre très simple avec une seule division",
+      "C) L'arbre ne fait aucune prédiction et retourne une erreur",
+      "D) Le modèle plante immédiatement"
     ],
     "correct": "B"
   },
@@ -569,8 +569,8 @@
     "question": "Pourquoi l'algorithme ID3 favorise-t-il naturellement les features avec beaucoup de valeurs distinctes (ex: ID client) ?",
     "options": [
       "A) Ces features ont toujours une meilleure précision",
-      "B) Le gain d'information est naturellement plus élevé pour des features à haute cardinalité car elles créent des sous-nœuds très purs mais artificiels",
-      "C) Elles sont plus faciles à traiter",
+      "B)  car elles créent des sous-nœuds très purs mais artificiels",
+      "C) Elles sont plus faciles à traiter pour l'algorithme",
       "D) Elles réduisent l'overfitting"
     ],
     "correct": "B"
@@ -582,8 +582,8 @@
     "options": [
       "A) Une division alternative utilisée pour remplacer une variable lorsqu'une valeur est manquante",
       "B) Une division effectuée après l'élagage",
-      "C) Un critère de division exclusivement réservé aux données continues",
-      "D) Une technique pour forcer l'arbre à devenir asymétrique"
+      "C) Un critère de division exclusivement réservé aux données continues ",
+      "D) Une technique pour forcer l'arbre à devenir asymétrique "
     ],
     "correct": "A"
   },
