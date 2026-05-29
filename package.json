@@ -1,0 +1,18 @@
+{
+  "name": "ml-quiz-lab",
+  "version": "1.0.0",
+  "description": "Application interactive et moderne de Quiz/QCM sur le Machine Learning",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx serve ."
+  },
+  "keywords": [
+    "machine-learning",
+    "quiz",
+    "qcm",
+    "spa",
+    "vercel"
+  ],
+  "author": "Antigravity",
+  "license": "MIT"
+}

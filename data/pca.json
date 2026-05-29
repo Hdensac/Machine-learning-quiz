@@ -1,0 +1,552 @@
+[
+  {
+    "id": 1,
+    "theme": "Concepts généraux ACP",
+    "question": "Que signifie l'acronyme PCA (ou ACP en français) ?",
+    "options": [
+      "A. Analyse de Corrélation Principale",
+      "B. Analyse en Composantes Principales",
+      "C. Algorithme de Calcul Principal"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 2,
+    "theme": "Concepts généraux ACP",
+    "question": "À quel type d'apprentissage appartient l'ACP ?",
+    "options": [
+      "A. Apprentissage supervisé",
+      "B. Apprentissage non supervisé",
+      "C. Apprentissage par renforcement"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 3,
+    "theme": "Concepts généraux ACP",
+    "question": "Quel phénomène l'ACP tente-t-elle de combattre ?",
+    "options": [
+      "A. La linéarité des données",
+      "B. La malédiction de la dimension",
+      "C. La corrélation nulle"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 4,
+    "theme": "Concepts généraux ACP",
+    "question": "Quelle est la définition de la réduction dimensionnelle ?",
+    "options": [
+      "A. Transformer des données d'un espace de grande dimension vers un espace plus petit en gardant l'essentiel",
+      "B. Supprimer aléatoirement des colonnes d'un tableau",
+      "C. Augmenter le nombre de variables pour mieux voir les détails"
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 5,
+    "theme": "Concepts généraux ACP",
+    "question": "L'ACP est-elle une méthode de :",
+    "options": [
+      "A. Sélection de variables (choix d'un sous-ensemble)",
+      "B. Extraction de caractéristiques (création de nouvelles variables)",
+      "C. Classification automatique"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 6,
+    "theme": "Concepts généraux ACP",
+    "question": "Dans quel but utilise-t-on l'ACP en analyse exploratoire ?",
+    "options": [
+      "A. Pour prédire une valeur cible",
+      "B. Pour visualiser des données complexes en 2D ou 3D",
+      "C. Pour supprimer les individus aberrants automatiquement"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 7,
+    "theme": "Concepts généraux ACP",
+    "question": "Que permet de réduire l'ACP dans un jeu de données ?",
+    "options": [
+      "A. Le nombre d'individus (lignes)",
+      "B. Le nombre de variables (colonnes) et la redondance",
+      "C. La précision des mesures"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 8,
+    "theme": "Concepts généraux ACP",
+    "question": "Comment l'ACP traite-t-elle les variables initiales ?",
+    "options": [
+      "A. Elle les conserve telles quelles",
+      "B. Elle les combine linéairement pour créer de nouveaux axes",
+      "C. Elle les classe par ordre alphabétique"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 9,
+    "theme": "Concepts généraux ACP",
+    "question": "L'ACP est une méthode de projection :",
+    "options": [
+      "A. Orthogonale",
+      "B. Circulaire",
+      "C. Aléatoire"
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 10,
+    "theme": "Concepts généraux ACP",
+    "question": "Quel est l'un des risques d'avoir trop de dimensions ?",
+    "options": [
+      "A. Le surapprentissage (overfitting)",
+      "B. Une trop grande clarté visuelle",
+      "C. Une réduction du temps de calcul"
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 11,
+    "theme": "Principes fondamentaux",
+    "question": "Quelle est l'hypothèse fondamentale de l'ACP concernant l'information ?",
+    "options": [
+      "A. Information = Moyenne",
+      "B. Information = Variance",
+      "C. Information = Corrélation nulle"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 12,
+    "theme": "Principes fondamentaux",
+    "question": "Que signifie une forte variance sur un axe principal ?",
+    "options": [
+      "A. Que les données sont bruitées et inutiles",
+      "B. Que les données sont distinguables et informatives",
+      "C. Que toutes les valeurs sont identiques"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 13,
+    "theme": "Principes fondamentaux",
+    "question": "Que mesure la covariance entre deux variables ?",
+    "options": [
+      "A. Leur moyenne cumulée",
+      "B. La manière dont elles varient conjointement",
+      "C. Leur écart par rapport à zéro"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 14,
+    "theme": "Principes fondamentaux",
+    "question": "Si la covariance entre deux variables est proche de zéro, cela signifie :",
+    "options": [
+      "A. Elles sont fortement liées",
+      "B. Elles sont indépendantes d'un point de vue linéaire",
+      "C. Elles ont la même échelle"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 15,
+    "theme": "Principes fondamentaux",
+    "question": "Quel outil mathématique résume les relations entre toutes les variables ?",
+    "options": [
+      "A. La matrice d'identité",
+      "B. La matrice de covariance (ou de corrélation)",
+      "C. Le vecteur propre"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 16,
+    "theme": "Principes fondamentaux",
+    "question": "L'ACP cherche à maximiser :",
+    "options": [
+      "A. La distance entre les moyennes",
+      "B. La variance projetée sur les nouveaux axes",
+      "C. Le nombre de zéros dans les données"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 17,
+    "theme": "Principes fondamentaux",
+    "question": "Comment sont les axes (composantes) créés par l'ACP entre eux ?",
+    "options": [
+      "A. Parallèles",
+      "B. Orthogonaux (non corrélés)",
+      "C. Aléatoires"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 18,
+    "theme": "Principes fondamentaux",
+    "question": "La première composante principale (PC1) est celle qui :",
+    "options": [
+      "A. Explique le moins de variance",
+      "B. Explique la plus grande part de la variance totale",
+      "C. Contient uniquement les valeurs positives"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 19,
+    "theme": "Principes fondamentaux",
+    "question": "La deuxième composante principale (PC2) capture :",
+    "options": [
+      "A. La plus grande part de variance restante, perpendiculairement à PC1",
+      "B. La même information que PC1",
+      "C. Uniquement le bruit de fond"
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 20,
+    "theme": "Principes fondamentaux",
+    "question": "Plus on ajoute de composantes, plus la variance expliquée par chaque nouvel axe :",
+    "options": [
+      "A. Augmente",
+      "B. Diminue",
+      "C. Reste constante"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 21,
+    "theme": "Prétraitement et standardisation",
+    "question": "Quelle étape est indispensable avant de calculer l'ACP si les échelles diffèrent ?",
+    "options": [
+      "A. La suppression des colonnes",
+      "B. Le centrage et la réduction (standardisation)",
+      "C. L'arrondi des valeurs"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 22,
+    "theme": "Prétraitement et standardisation",
+    "question": "Que signifie 'centrer' les données ?",
+    "options": [
+      "A. Soustraire la moyenne à chaque valeur pour avoir une moyenne nulle",
+      "B. Diviser par l'écart-type",
+      "C. Multiplier par 100"
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 23,
+    "theme": "Prétraitement et standardisation",
+    "question": "Quel est l'objectif de la réduction (division par l'écart-type) ?",
+    "options": [
+      "A. Mettre toutes les variables sur une même échelle (éviter l'effet de taille)",
+      "B. Augmenter la variance des petites variables",
+      "C. Supprimer les valeurs négatives"
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 24,
+    "theme": "Prétraitement et standardisation",
+    "question": "Une fois standardisées, les variables ont :",
+    "options": [
+      "A. Une moyenne de 1 et un écart-type de 0",
+      "B. Une moyenne de 0 et un écart-type de 1",
+      "C. Des valeurs uniquement entre 0 et 1"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 25,
+    "theme": "Mathématiques de l'ACP",
+    "question": "Qu'est-ce qu'une valeur propre (eigenvalue) dans l'ACP ?",
+    "options": [
+      "A. La direction d'un axe",
+      "B. La quantité de variance expliquée par une composante",
+      "C. Le nom d'une variable initiale"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 26,
+    "theme": "Mathématiques de l'ACP",
+    "question": "Qu'est-ce qu'un vecteur propre (eigenvector) ?",
+    "options": [
+      "A. La direction ou l'orientation d'un axe principal",
+      "B. Le score d'un individu",
+      "C. La somme des moyennes"
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 27,
+    "theme": "Mathématiques de l'ACP",
+    "question": "Le calcul des valeurs et vecteurs propres provient de :",
+    "options": [
+      "A. Une simple addition",
+      "B. La décomposition spectrale de la matrice de covariance",
+      "C. Une régression linéaire"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 28,
+    "theme": "Mathématiques de l'ACP",
+    "question": "La projection des données consiste à :",
+    "options": [
+      "A. Transformer les coordonnées initiales dans le nouveau système d'axes",
+      "B. Supprimer les données inutiles",
+      "C. Dessiner les points au hasard"
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 29,
+    "theme": "Mathématiques de l'ACP",
+    "question": "Chaque composante principale est une :",
+    "options": [
+      "A. Combinaison linéaire des variables d'origine",
+      "B. Combinaison non linéaire (exponentielle)",
+      "C. Sélection aléatoire de variables"
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 30,
+    "theme": "Mathématiques de l'ACP",
+    "question": "Si on garde toutes les composantes principales possibles :",
+    "options": [
+      "A. On conserve 100 % de l'information (mais sans réduction)",
+      "B. On perd la moitié de l'information",
+      "C. Le calcul est impossible"
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 31,
+    "theme": "Évaluation et paramètres",
+    "question": "Qu'est-ce que la variance expliquée cumulée ?",
+    "options": [
+      "A. La somme des variances expliquées par les premières composantes retenues",
+      "B. Le carré de la moyenne",
+      "C. La différence entre PC1 et PC2"
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 32,
+    "theme": "Évaluation et paramètres",
+    "question": "Quel graphique permet de choisir le nombre de composantes à retenir ?",
+    "options": [
+      "A. L'histogramme des fréquences",
+      "B. Le graphique des éboulis (Scree plot)",
+      "C. La boîte à moustaches (Boxplot)"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 33,
+    "theme": "Évaluation et paramètres",
+    "question": "Qu'est-ce que la 'règle du coude' (Elbow rule) ?",
+    "options": [
+      "A. Identifier le point où le gain de variance devient marginal",
+      "B. Arrêter l'analyse après 2 composantes quoi qu'il arrive",
+      "C. Garder uniquement les axes avec une valeur propre égale à 0"
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 34,
+    "theme": "Évaluation et paramètres",
+    "question": "Quel seuil de variance cumulée est généralement visé en pratique ?",
+    "options": [
+      "A. 10 % à 20 %",
+      "B. 80 % à 95 %",
+      "C. 100 % exactement"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 35,
+    "theme": "Évaluation et paramètres",
+    "question": "Dans Scikit-Learn, que signifie n_components=0.95 ?",
+    "options": [
+      "A. Garder 0,95 composante",
+      "B. Garder assez de composantes pour expliquer 95 % de la variance",
+      "C. Supprimer 95 % des variables"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 36,
+    "theme": "Caractéristiques de l'ACP",
+    "question": "L'ACP est une méthode :",
+    "options": [
+      "A. Linéaire",
+      "B. Non linéaire",
+      "C. Manifold (courbe)"
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 37,
+    "theme": "Caractéristiques de l'ACP",
+    "question": "L'ACP est-elle sensible aux valeurs aberrantes (outliers) ?",
+    "options": [
+      "A. Oui, elles peuvent fausser les axes principaux",
+      "B. Non, elle les ignore automatiquement",
+      "C. Uniquement si on ne standardise pas"
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 38,
+    "theme": "Interprétation",
+    "question": "Que représente un 'cercle de corrélation' ?",
+    "options": [
+      "A. La qualité de représentation des variables sur les axes",
+      "B. Le nombre d'individus par groupe",
+      "C. La moyenne des erreurs"
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 39,
+    "theme": "Interprétation",
+    "question": "Sur un cercle de corrélation, une variable proche du bord est :",
+    "options": [
+      "A. Bien représentée par les axes",
+      "B. Très mal représentée",
+      "C. Inutile pour l'analyse"
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 40,
+    "theme": "Interprétation",
+    "question": "Deux flèches très proches sur un cercle de corrélation indiquent :",
+    "options": [
+      "A. Une forte corrélation positive entre ces variables",
+      "B. Qu'elles sont opposées",
+      "C. Qu'elles n'ont aucun lien"
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 41,
+    "theme": "Avantages et limites",
+    "question": "Un avantage majeur de l'ACP est :",
+    "options": [
+      "A. La suppression du bruit et de la multicolinéarité",
+      "B. L'augmentation de la complexité",
+      "C. Le maintien du nom des variables d'origine sur les axes"
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 42,
+    "theme": "Avantages et limites",
+    "question": "Une limite importante de l'ACP est :",
+    "options": [
+      "A. La perte d'interprétabilité sémantique des axes",
+      "B. La lenteur de calcul sur 2 variables",
+      "C. L'obligation de travailler sur des données textuelles"
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 43,
+    "theme": "Avantages et limites",
+    "question": "L'ACP est-elle adaptée aux relations non linéaires complexes ?",
+    "options": [
+      "A. Oui, c'est sa force principale",
+      "B. Non, elle ne capture que les relations linéaires",
+      "C. Uniquement si on utilise 3 composantes"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 44,
+    "theme": "Alternatives",
+    "question": "Quelle méthode est une alternative non linéaire à l'ACP pour la visualisation ?",
+    "options": [
+      "A. La régression linéaire",
+      "B. t-SNE ou UMAP",
+      "C. La LDA"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 45,
+    "theme": "Comparaisons",
+    "question": "Quelle est la différence entre ACP et LDA ?",
+    "options": [
+      "A. L'ACP est non supervisée, la LDA est supervisée (utilise les classes)",
+      "B. L'ACP est plus complexe mathématiquement",
+      "C. Il n'y a aucune différence"
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 46,
+    "theme": "Applications",
+    "question": "Peut-on intégrer des variables qualitatives (catégorielles) dans une ACP ?",
+    "options": [
+      "A. Oui, en les ajoutant comme variables supplémentaires illustratives",
+      "B. Non, c'est strictement impossible",
+      "C. Oui, en les multipliant par la moyenne"
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 47,
+    "theme": "Applications",
+    "question": "L'ACP permet-elle de détecter des groupes (clusters) naturels ?",
+    "options": [
+      "A. Oui, indirectement en projetant les données",
+      "B. Non, c'est impossible",
+      "C. Uniquement pour des données binaires"
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 48,
+    "theme": "Applications",
+    "question": "Comment l'ACP aide-t-elle le stockage des données ?",
+    "options": [
+      "A. En réduisant l'espace nécessaire (moins de colonnes)",
+      "B. En compressant les fichiers .zip",
+      "C. En supprimant les doublons d'individus"
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 49,
+    "theme": "Géométrie",
+    "question": "Géométriquement, l'ACP correspond à :",
+    "options": [
+      "A. Une rotation des axes du repère initial",
+      "B. Une translation des points vers le haut",
+      "C. Un zoom sur les valeurs centrales"
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 50,
+    "theme": "Conclusion",
+    "question": "En conclusion, l'ACP est un compromis entre :",
+    "options": [
+      "A. Simplification du modèle et perte d'information",
+      "B. Nombre de lignes et nombre de colonnes",
+      "C. Vitesse de calcul et précision du clavier"
+    ],
+    "correct": "A"
+  }
+]

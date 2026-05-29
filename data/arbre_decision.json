@@ -1,0 +1,602 @@
+[
+  {
+    "id": 1,
+    "theme": "Arbres de Décision",
+    "question": "Qu'est-ce qu'un arbre de décision ?",
+    "options": [
+      "A) Un réseau de neurones artificiel",
+      "B) Un modèle de prédiction structuré en nœuds et branches",
+      "C) Un algorithme de clustering",
+      "D) Un type de régression logistique"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 2,
+    "theme": "Arbres de Décision",
+    "question": "Dans un arbre de décision, qu'appelle-t-on le nœud racine?",
+    "options": [
+      "A) La feuille qui donne la prédiction finale",
+      "B) Le premier nœud qui représente la meilleure division",
+      "C) Un nœud intermédiaire quelconque",
+      "D) Le nœud avec le moins d'exemples"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 3,
+    "theme": "Arbres de Décision",
+    "question": "Que représente une feuille (leaf node) dans un arbre de décision ?",
+    "options": [
+      "A) Une condition de test",
+      "B) Le résultat final ou la classe prédite",
+      "C) Un nœud intermédiaire",
+      "D) Une donnée d'entrainement"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 4,
+    "theme": "Arbres de Décision",
+    "question": "A quel type de problème les arbres de décision peuvent-ils s'appliquer ?",
+    "options": [
+      "A) Classification uniquement",
+      "B) Régression uniquement",
+      "C) Classification et régression",
+      "D) Uniquement les données numériques"
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 5,
+    "theme": "Arbres de Décision",
+    "question": "Quel type d'apprentissage utilise un arbre de décision?",
+    "options": [
+      "A) Non supervisé",
+      "B) Semi-supervisé",
+      "C) Supervisé",
+      "D) Par renforcement"
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 6,
+    "theme": "Arbres de Décision",
+    "question": "Quel est le rôle de l'entropie dans un arbre de décision ?",
+    "options": [
+      "A) Mesurer la vitesse d'apprentissage",
+      "B) Mesurer le désordre ou l'impureté d'un nœud",
+      "C) Calculer la profondeur de l'arbre",
+      "D) Déterminer le nombre de feuilles"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 7,
+    "theme": "Arbres de Décision",
+    "question": "Si un nœud contient des exemples appartenant tous à la même classe, son entropie est égale à :",
+    "options": [
+      "A) 1",
+      "B) 0.5",
+      "C) 0",
+      "D) l'infini"
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 8,
+    "theme": "Arbres de Décision",
+    "question": "L'indice de Gini est un critère utilisé pour :",
+    "options": [
+      "A) Mesurer l'impureté d'un nœud (alternative à l'entropie)",
+      "B) Calculer la corrélation linéaire",
+      "C) Normaliser les données",
+      "D) Éviter la division des nœuds"
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 9,
+    "theme": "Arbres de Décision",
+    "question": "Quelle est la valeur maximale de l'indice de Gini pour un problème de classification binaire équilibré ?",
+    "options": [
+      "A) 1",
+      "B) 0.5",
+      "C) 0",
+      "D) 0.25"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 10,
+    "theme": "Arbres de Décision",
+    "question": "Qu'est-ce que le 'Gain d'Information' (Information Gain) ?",
+    "options": [
+      "A) L'augmentation de l'entropie après une division",
+      "B) La différence entre l'entropie du nœud parent et la somme pondérée de l'entropie des nœuds enfants",
+      "C) Le nombre de variables ajoutées au modèle",
+      "D) Le temps gagné lors de l'exécution de l'algorithme"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 11,
+    "theme": "Arbres de Décision",
+    "question": "Lors de la construction d'un arbre, on choisit la division (split) qui :",
+    "options": [
+      "A) Minimise le gain d'information",
+      "B) Maximise le gain d'information ou minimise l'indice de Gini",
+      "C) Augmente la variance des nœuds enfants",
+      "D) Contient le moins d'exemples possible"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 12,
+    "theme": "Arbres de Décision",
+    "question": "Lequel de ces algorithmes n'est PAS un algorithme de construction d'arbres de décision ?",
+    "options": [
+      "A) ID3",
+      "B) CART",
+      "C) C4.5",
+      "D) Apriori"
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 13,
+    "theme": "Arbres de Décision",
+    "question": "Quelle est la spécificité de l'algorithme CART par rapport à ID3 ?",
+    "options": [
+      "A) CART ne produit que des arbres binaires (chaque nœud se divise en exactement deux branches)",
+      "B) CART n'utilise que l'entropie",
+      "C) CART est un algorithme non supervisé",
+      "D) CART ne gère pas les variables continues"
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 14,
+    "theme": "Arbres de Décision",
+    "question": "Quel critère de division utilise principalement l'algorithme CART pour la classification ?",
+    "options": [
+      "A) Le gain ratio",
+      "B) L'indice de Gini",
+      "C) La variance",
+      "D) La distance Euclidienne"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 15,
+    "theme": "Arbres de Décision",
+    "question": "Quel critère de division utilise l'algorithme CART pour la régression ?",
+    "options": [
+      "A) L'indice de Gini",
+      "B) La réduction de la variance (ou MSE - Erreur Quadratique Moyenne)",
+      "C) Le taux d'erreur de classification",
+      "D) L'entropie de Shannon"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 16,
+    "theme": "Arbres de Décision",
+    "question": "L'algorithme ID3 ne peut pas gérer nativement :",
+    "options": [
+      "A) Les variables nominales (catégorielles)",
+      "B) Les variables continues (numériques)",
+      "C) Les données textuelles",
+      "D) Les classes binaires"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 17,
+    "theme": "Arbres de Décision",
+    "question": "Quel algorithme succède à ID3 et permet de gérer les données continues et les valeurs manquantes ?",
+    "options": [
+      "A) K-Means",
+      "B) C4.5",
+      "C) PageRank",
+      "D) Apriori"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 18,
+    "theme": "Arbres de Décision",
+    "question": "Qu'est-ce que l'élagage (pruning) d'un arbre de décision ?",
+    "options": [
+      "A) L'action d'ajouter de nouvelles branches pour agrandir l'arbre",
+      "B) L'action de couper des branches peu significatives pour simplifier l'arbre et éviter l'overfitting",
+      "C) Le processus de chargement des données",
+      "D) Le changement de format du fichier de sortie"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 19,
+    "theme": "Arbres de Décision",
+    "question": "Le pré-élagage (pre-pruning) consiste à :",
+    "options": [
+      "A) Couper les branches après la fin de la construction complète de l'arbre",
+      "B) Arrêter la croissance de l'arbre pendant sa construction selon des critères (profondeur max, nb min d'exemples par nœud)",
+      "C) Supprimer des variables avant d'exécuter l'algorithme",
+      "D) Modifier la variable cible"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 20,
+    "theme": "Arbres de Décision",
+    "question": "Le post-élagage (post-pruning) consiste à :",
+    "options": [
+      "A) Définir une profondeur maximale avant de commencer",
+      "B) Construire l'arbre complet, puis simplifier ou supprimer des sous-arbres en évaluant leur impact sur un jeu de validation",
+      "C) Normaliser les features après l'entraînement",
+      "D) Relancer l'algorithme avec un autre sous-ensemble de données"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 21,
+    "theme": "Arbres de Décision",
+    "question": "Un arbre de décision qui a une profondeur infinie et qui apprend par cœur les données d'entraînement souffre de :",
+    "options": [
+      "A) Sous-apprentissage (underfitting)",
+      "B) Sur-apprentissage (overfitting)",
+      "C) Manque de mémoire",
+      "D) Convergence prématurée"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 22,
+    "theme": "Arbres de Décision",
+    "question": "Parmi ces hyperparamètres, lequel permet de contrôler directement l'overfitting d'un arbre dans scikit-learn ?",
+    "options": [
+      "A) n_estimators",
+      "B) max_depth",
+      "C) learning_rate",
+      "D) n_jobs"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 23,
+    "theme": "Arbres de Décision",
+    "question": "Que signifie l'hyperparamètre `min_samples_split` ?",
+    "options": [
+      "A) Le nombre minimum de feuilles dans l'arbre",
+      "B) Le nombre minimum d'exemples requis dans un nœud pour qu'il puisse être divisé",
+      "C) Le nombre minimum de variables à tester",
+      "D) Le nombre d'exemples dans le jeu de test"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 24,
+    "theme": "Arbres de Décision",
+    "question": "Que signifie l'hyperparamètre `min_samples_leaf` ?",
+    "options": [
+      "A) Le nombre maximum de nœuds internes",
+      "B) Le nombre minimum d'exemples qu'un nœud terminal (feuille) doit contenir",
+      "C) Le nombre de branches partant de la racine",
+      "D) La taille minimale de la variable cible"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 25,
+    "theme": "Arbres de Décision",
+    "question": "Lequel de ces éléments est un avantage majeur des arbres de décision ?",
+    "options": [
+      "A) Ils sont insensibles à l'overfitting",
+      "B) Ils sont hautement interprétables et visualisables par l'humain",
+      "C) Ils sont toujours plus précis que les réseaux de neurones",
+      "D) Ils nécessitent une quantité infinie de données"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 26,
+    "theme": "Arbres de Décision",
+    "question": "Les arbres de décision nécessitent-ils obligatoirement une mise à l'échelle (scaling/normalization) des variables ?",
+    "options": [
+      "A) Oui, c'est indispensable comme pour les SVM",
+      "B) Non, ils sont invariants aux transformations monotones des variables (le choix du split reste identique)",
+      "C) Uniquement pour la classification binaire",
+      "D) Oui, sinon l'algorithme ne converge pas"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 27,
+    "theme": "Arbres de Décision",
+    "question": "Quelle est la principale faiblesse d'un arbre de décision unique ?",
+    "options": [
+      "A) Il est impossible à coder",
+      "B) Il a une forte variance et est instable (une petite modification des données peut changer toute la structure)",
+      "C) Il est trop lent lors des prédictions",
+      "D) Il ne fonctionne pas sur des données textuelles"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 28,
+    "theme": "Arbres de Décision",
+    "question": "Dans un problème de régression, comment une feuille calcule-t-elle sa prédiction finale ?",
+    "options": [
+      "A) Elle prend la valeur maximale du dataset",
+      "B) Elle calcule la moyenne (ou la médiane) des valeurs cibles des exemples situés dans cette feuille",
+      "C) Elle effectue une régression linéaire multiple",
+      "D) Elle choisit une valeur au hasard"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 29,
+    "theme": "Arbres de Décision",
+    "question": "Dans un problème de classification, comment une feuille calcule-t-elle sa prédiction finale ?",
+    "options": [
+      "A) Par un vote de majorité (la classe la plus fréquente parmi les exemples du nœud)",
+      "B) En prenant la classe la moins représentée",
+      "C) Par une multiplication matricielle",
+      "D) En demandant une intervention utilisateur"
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 30,
+    "theme": "Arbres de Décision",
+    "question": "Comment appelle-t-on la méthode combinant plusieurs arbres de décision pour améliorer les performances ?",
+    "options": [
+      "A) Le clustering hiérarchique",
+      "B) L'apprentissage d'ensemble (Ensemble Learning, ex: Random Forest)",
+      "C) La descente de gradient stochastique",
+      "D) La réduction de dimension"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 31,
+    "theme": "Arbres de Décision",
+    "question": "Quelle classe de scikit-learn utilise-t-on pour créer un arbre de décision en classification ?",
+    "options": [
+      "A) `DecisionTreeRegressor`",
+      "B) `DecisionTreeClassifier`",
+      "C) `LinearSVC`",
+      "D) `KNeighborsClassifier`"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 32,
+    "theme": "Arbres de Décision",
+    "question": "Quelle classe de scikit-learn utilise-t-on pour créer un arbre de décision en régression ?",
+    "options": [
+      "A) `DecisionTreeClassifier`",
+      "B) `DecisionTreeRegressor`",
+      "C) `LinearRegression`",
+      "D) `SVR`"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 33,
+    "theme": "Arbres de Décision",
+    "question": "Quelle fonction de scikit-learn permet d'afficher textuellement ou graphiquement un arbre entraîné ?",
+    "options": [
+      "A) `plot_tree` (du module sklearn.tree)",
+      "B) `show_model`",
+      "C) `display_graph`",
+      "D) `print_structure`"
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 34,
+    "theme": "Arbres de Décision",
+    "question": "Si on fournit des variables parfaitement corrélées (redondantes) à un arbre de décision :",
+    "options": [
+      "A) L'algorithme plante immédiatement",
+      "B) L'arbre choisira l'une d'elles lors du split et ignorera l'autre sans que cela ne perturbe ses performances",
+      "C) Les prédictions deviennent fausses à 100%",
+      "D) La profondeur de l'arbre double automatiquement"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 35,
+    "theme": "Arbres de Décision",
+    "question": "Comment s'appelle l'importance accordée à chaque feature par un arbre ?",
+    "options": [
+      "A) Feature weights",
+      "B) Feature importances (calculées via la réduction de l'impureté de Gini)",
+      "C) Coefficients directeurs",
+      "D) P-values"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 36,
+    "theme": "Arbres de Décision",
+    "question": "Un arbre de décision trace des frontières de décision qui sont géométriquement :",
+    "options": [
+      "A) Des lignes obliques à 45 degrés",
+      "B) Des hyperplans parallèles aux axes des caractéristiques (axes-aligned orthogoraux)",
+      "C) Des cercles concentriques",
+      "D) Des courbes polynomiales complexes"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 37,
+    "theme": "Arbres de Décision",
+    "question": "Face à un problème non linéaire complexe, un arbre de décision nécessite généralement :",
+    "options": [
+      "A) Une transformation des données par un noyau (kernel)",
+      "B) Une profondeur plus élevée pour approximer la frontière complexe par paliers",
+      "C) D'être remplacé par une régression linéaire simple",
+      "D) Moins de données qu'un problème linéaire"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 38,
+    "theme": "Arbres de Décision",
+    "question": "L'indice de Gini d'un nœud pur (contenant une seule classe) vaut :",
+    "options": [
+      "A) 1",
+      "B) 0",
+      "C) 0.5",
+      "D) -1"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 39,
+    "theme": "Arbres de Décision",
+    "question": "L'entropie maximale d'un nœud dans un problème à 4 classes parfaitement équilibrées vaut :",
+    "options": [
+      "A) 1",
+      "B) 2",
+      "C) 0",
+      "D) 4"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 40,
+    "theme": "Arbres de Décision",
+    "question": "Que se passe-t-il si la valeur de `max_depth` est fixée à 1 ?",
+    "options": [
+      "A) L'arbre est complet et très performant",
+      "B) On obtient un 'Decision Stump' (souvent utilisé dans le boosting), le modèle est très simple (underfitting)",
+      "C) L'arbre ne fait aucune prédiction",
+      "D) Le modèle plante"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 41,
+    "theme": "Arbres de Décision",
+    "question": "Le critère 'log_loss' dans scikit-learn est équivalent à :",
+    "options": [
+      "A) L'indice de Gini",
+      "B) L'entropie de Shannon",
+      "C) L'erreur absolue moyenne",
+      "D) Le coefficient R²"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 42,
+    "theme": "Arbres de Décision",
+    "question": "Pourquoi dit-on que les arbres de décision sont des modèles 'non-paramétriques' ?",
+    "options": [
+      "A) Parce qu'ils n'ont pas d'hyperparamètres réglables",
+      "B) Parce que le nombre de paramètres (nœuds) n'est pas fixé à l'avance et dépend de la structure des données",
+      "C) Parce qu'ils ne fonctionnent pas avec des chiffres",
+      "D) Parce qu'ils refusent l'utilisation de listes Python"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 43,
+    "theme": "Arbres de Décision",
+    "question": "La complexité de prédiction d'un arbre équilibré de profondeur D est de l'ordre de :",
+    "options": [
+      "A) O(N)",
+      "B) O(D) (généralement proportionnel à log(N))",
+      "C) O(N²)",
+      "D) O(1)"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 44,
+    "theme": "Arbres de Décision",
+    "question": "Une profondeur excessive d'un arbre entraîne généralement une augmentation de :",
+    "options": [
+      "A) Le biais du modèle",
+      "B) La variance du modèle (Overfitting)",
+      "C) Temps de prédiction trop lent",
+      "D) Problème de mémoire"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 45,
+    "theme": "Arbres de Décision",
+    "question": "Avec un dataset contenant 95% de classe A et 5% de classe B, que risque un arbre naïf sans ajustement ?",
+    "options": [
+      "A) Prédire toujours la classe B",
+      "B) Prédire toujours la classe A (majoritaire)",
+      "C) Diviser parfaitement les deux classes",
+      "D) Ne pas converger"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 46,
+    "theme": "Arbres de Décision",
+    "question": "Une justesse d'entraînement (Train accuracy) = 99% et une justesse de test (Test accuracy) = 62%. C'est un signe clair de :",
+    "options": [
+      "A) Underfitting",
+      "B) Overfitting",
+      "C) Modèle parfaitement calibré",
+      "D) Problème dans les données de test"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 47,
+    "theme": "Arbres de Décision",
+    "question": "Qu'est-ce que le critère 'gain ratio' utilise dans l'algorithme C4.5 ?",
+    "options": [
+      "A) Gain d'information / Entropie de la feature",
+      "B) Gain d'information x Entropie cible",
+      "C) Gini / Nombre de branches",
+      "D) Gain d'information - pénalité de profondeur"
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 48,
+    "theme": "Arbres de Décision",
+    "question": "Pourquoi l'algorithme ID3 favorise-t-il naturellement les features avec beaucoup de valeurs distinctes (ex: ID client) ?",
+    "options": [
+      "A) Ces features ont toujours une meilleure précision",
+      "B) Le gain d'information est naturellement plus élevé pour des features à haute cardinalité car elles créent des sous-nœuds très purs mais artificiels",
+      "C) Elles sont plus faciles à traiter",
+      "D) Elles réduisent l'overfitting"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 49,
+    "theme": "Arbres de Décision",
+    "question": "Qu'est-ce qu'un 'surrogate split' (division de substitution) dans l'algorithme CART ?",
+    "options": [
+      "A) Une division alternative utilisée pour remplacer une variable lorsqu'une valeur est manquante",
+      "B) Une division effectuée après l'élagage",
+      "C) Un critère de division exclusivement réservé aux données continues",
+      "D) Une technique pour forcer l'arbre à devenir asymétrique"
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 50,
+    "theme": "Arbres de Décision",
+    "question": "Dans scikit-learn, pour compenser un fort déséquilibre de classes (imbalanced dataset), quel paramètre peut-on utiliser ?",
+    "options": [
+      "A) `splitter='random'`",
+      "B) `class_weight='balanced'`",
+      "C) `ccp_alpha=0.01`",
+      "D) `criterion='gini'`"
+    ],
+    "correct": "B"
+  }
+]

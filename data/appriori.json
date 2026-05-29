@@ -1,0 +1,602 @@
+[
+  {
+    "id": 1,
+    "theme": "Fondamentaux Apriori",
+    "question": "Dans quel paradigme de l'apprentissage automatique l'algorithme Apriori s'inscrit-il ?",
+    "options": [
+      "A. Apprentissage supervisé par classification discriminante",
+      "B. Apprentissage supervisé par régression linéaire",
+      "C. Apprentissage non supervisé pour l'extraction de structures latentes",
+      "D. Apprentissage par renforcement basé sur les processus de décision de Markov"
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 2,
+    "theme": "Fondamentaux Apriori",
+    "question": "Quelle est la définition formelle d'une règle d'association dans le cadre de cet algorithme ?",
+    "options": [
+      "A. Une corrélation linéaire entre deux variables continues",
+      "B. Une implication logique de la forme X → Y, où X et Y sont des ensembles d'items disjoints (X ∩ Y = ∅)",
+      "C. Une fonction de partitionnement regroupant des transactions par similarité cosinus",
+      "D. Une structure hiérarchique de dépendances bayésiennes sans contrainte de disjonction"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 3,
+    "theme": "Fondamentaux Apriori",
+    "question": "Qu'est-ce qu'une « transaction » au sens théorique de la fouille de données ?",
+    "options": [
+      "A. Un transfert de flux entre deux nœuds d'un graphe",
+      "B. Une itération du processus de mise à jour des poids synaptiques",
+      "C. Un ensemble fini d'items (articles, événements ou comportements) identifié de manière unique dans une base de données",
+      "D. Une opération atomique de modification d'un index inversé"
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 4,
+    "theme": "Fondamentaux Apriori",
+    "question": "La nature des bases de données exploitées par Apriori est généralement qualifiée de :",
+    "options": [
+      "A. Base transactionnelle creuse (sparse), où chaque entrée ne contient qu'une fraction des items possibles",
+      "B. Base relationnelle normalisée au sens de la troisième forme normale (3NF)",
+      "C. Base de données vectorielle optimisée pour la recherche de plus proches voisins",
+      "D. Matrice de covariance dense issue d'une réduction de dimensionnalité"
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 5,
+    "theme": "Fondamentaux Apriori",
+    "question": "Comment définit-on un « k-itemset » ?",
+    "options": [
+      "A. Un ensemble de règles possédant un lift supérieur à un seuil k",
+      "B. Une combinaison composée de précisément k items distincts",
+      "C. Le nombre de scans nécessaires pour valider la fréquence d'un item",
+      "D. Une partition de la base de données divisée en k sous-ensembles"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 6,
+    "theme": "Anti-monotonie",
+    "question": "Sur quelle propriété mathématique repose l'efficacité de l'élagage dans l'algorithme Apriori ?",
+    "options": [
+      "A. La convergence stochastique vers l'optimum global",
+      "B. La propriété d'anti-monotonie du support",
+      "C. L'indépendance conditionnelle des variables aléatoires",
+      "D. La linéarité de l'espérance mathématique"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 7,
+    "theme": "Anti-monotonie",
+    "question": "Selon le principe d'anti-monotonie, si un ensemble d'items S est jugé fréquent, que peut-on affirmer de manière certaine ?",
+    "options": [
+      "A. Tous les super-ensembles de S sont également fréquents",
+      "B. Tous les sous-ensembles de S sont également fréquents",
+      "C. Le lift de tout sous-ensemble de S est supérieur à 1",
+      "D. La confiance des règles dérivées de S est maximale"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 8,
+    "theme": "Anti-monotonie",
+    "question": "Si un ensemble d'items X est non fréquent par rapport au seuil min_support, quelle est la conséquence pour ses super-ensembles ?",
+    "options": [
+      "A. Ils doivent être évalués individuellement au prochain scan",
+      "B. Ils sont nécessairement non fréquents et peuvent être élagués a priori",
+      "C. Leur support est égal au support de X divisé par le nombre d'items",
+      "D. Ils deviennent fréquents si le min_confidence est abaissé"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 9,
+    "theme": "Anti-monotonie",
+    "question": "Quel est l'impact de la propriété d'Apriori sur l'espace de recherche ?",
+    "options": [
+      "A. Elle garantit l'obtention d'un optimum global sans exploration exhaustive",
+      "B. Elle réduit drastiquement le nombre de candidats à évaluer en élaguant les branches infructueuses",
+      "C. Elle permet de traiter des variables continues sans discrétisation préalable",
+      "D. Elle limite la profondeur des règles d'association à deux items maximum"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 10,
+    "theme": "Anti-monotonie",
+    "question": "La métrique du support est dite « monotone décroissante ». Cela signifie que :",
+    "options": [
+      "A. L'ajout d'un item à un ensemble ne peut qu'augmenter son support",
+      "B. Le support d'un ensemble d'items est toujours inférieur ou égal au support de ses sous-ensembles",
+      "C. Le support diminue linéairement avec le nombre de transactions de la base",
+      "D. La fréquence d'un item est inversement proportionnelle à son rang de fréquence"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 11,
+    "theme": "Anti-monotonie",
+    "question": "Quel est l'effet de l'élagage (pruning) sur le nombre de scans de la base de données ?",
+    "options": [
+      "A. Il permet de valider tous les itemsets en un scan unique, quelle que soit leur taille",
+      "B. Il réduit le nombre de candidats dont le support doit être compté lors de chaque scan itératif",
+      "C. Il augmente le nombre de scans pour garantir la précision statistique",
+      "D. Il supprime la nécessité de scanner la base pour les 1-itemsets"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 12,
+    "theme": "Anti-monotonie",
+    "question": "Si l'on remplaçait le support par une métrique non monotone, l'algorithme Apriori :",
+    "options": [
+      "A. Conserverait la même efficacité algorithmique",
+      "B. Ne pourrait plus utiliser l'élagage préventif des candidats",
+      "C. Convergerait plus rapidement vers les règles fortes",
+      "D. Deviendrait un algorithme d'apprentissage supervisé"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 13,
+    "theme": "Anti-monotonie",
+    "question": "L'appellation « Apriori » fait référence au fait que l'algorithme :",
+    "options": [
+      "A. Utilise la connaissance des itemsets fréquents de taille k pour limiter la génération de candidats de taille k+1",
+      "B. Nécessite une classification manuelle préalable des transactions",
+      "C. Suppose une distribution de probabilité normale sur les items",
+      "D. Évalue les règles avant même de considérer le support des items"
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 14,
+    "theme": "Anti-monotonie",
+    "question": "Lors de la génération de candidats de taille k, un ensemble est immédiatement éliminé si :",
+    "options": [
+      "A. Son lift est inférieur à 1",
+      "B. L'un de ses sous-ensembles de taille k-1 n'est pas fréquent",
+      "C. Il contient plus de deux items issus de la même transaction",
+      "D. Sa confiance estimée est inférieure au seuil de support"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 15,
+    "theme": "Anti-monotonie",
+    "question": "Sans la propriété d'anti-monotonie, la complexité de l'extraction d'itemsets fréquents serait :",
+    "options": [
+      "A. Linéaire par rapport au nombre d'items",
+      "B. Exponentielle (2^d), rendant le calcul impossible sur de larges catalogues d'items",
+      "C. Constante, car le support est une métrique simple",
+      "D. Logarithmique par rapport au nombre de transactions"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 16,
+    "theme": "Métriques d'évaluation",
+    "question": "Que mesure rigoureusement le Support d'un itemset X ?",
+    "options": [
+      "A. La fiabilité de l'implication X → Y",
+      "B. La probabilité jointe P(X) estimée par la fréquence relative d'apparition de X dans la base",
+      "C. La corrélation entre les items au sein de l'ensemble X",
+      "D. La probabilité conditionnelle P(X|Y)"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 17,
+    "theme": "Métriques d'évaluation",
+    "question": "Comment interpréter un support élevé pour une règle d'association ?",
+    "options": [
+      "A. La règle représente un comportement marginal mais systématique",
+      "B. La règle est statistiquement représentative car elle concerne une part significative de la population",
+      "C. La règle possède un fort pouvoir prédictif sur des données inédites",
+      "D. La règle est nécessairement le résultat d'une corrélation positive"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 18,
+    "theme": "Métriques d'évaluation",
+    "question": "Quelle est la formulation mathématique exacte de la Confiance d'une règle X → Y ?",
+    "options": [
+      "A. Support(X) / Support(X ∪ Y)",
+      "B. Support(X ∪ Y) / Support(X)",
+      "C. Support(X ∪ Y) / Support(Y)",
+      "D. Support(X) × Support(Y)"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 19,
+    "theme": "Métriques d'évaluation",
+    "question": "La Confiance peut être interprétée comme une mesure de :",
+    "options": [
+      "A. Probabilité conditionnelle P(Y|X), soit la probabilité que Y soit présent sachant que X l'est",
+      "B. Dépendance statistique entre X et Y",
+      "C. Fréquence globale de la règle dans la base de données",
+      "D. Variance résiduelle du modèle d'association"
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 20,
+    "theme": "Métriques d'évaluation",
+    "question": "Une confiance de 1,0 (ou 100 %) pour une règle X → Y implique que :",
+    "options": [
+      "A. X et Y sont parfaitement indépendants",
+      "B. Chaque transaction contenant X contient systématiquement Y",
+      "C. Chaque transaction contenant Y contient systématiquement X",
+      "D. Le support de X est égal au nombre total de transactions"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 21,
+    "theme": "Métriques d'évaluation",
+    "question": "Quelle est la fonction principale de la métrique Lift ?",
+    "options": [
+      "A. Évaluer la rareté d'une règle d'association",
+      "B. Mesurer le degré de dépendance ou d'intérêt d'une règle en la comparant au hasard",
+      "C. Calculer le temps CPU nécessaire à la génération de la règle",
+      "D. Déterminer le nombre d'items contenus dans l'antécédent"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 22,
+    "theme": "Métriques d'évaluation",
+    "question": "Comment le Lift compare-t-il les probabilités pour évaluer une association ?",
+    "options": [
+      "A. Il compare la probabilité d'apparition de Y sachant X avec la probabilité d'apparition de Y en l'absence de X",
+      "B. Il compare la probabilité jointe P(X, Y) avec le produit des probabilités marginales P(X)P(Y)",
+      "C. Il compare le support de la règle avec le support moyen de tous les items",
+      "D. Il divise la confiance par le support de l'antécédent"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 23,
+    "theme": "Métriques d'évaluation",
+    "question": "Un Lift strictement supérieur à 1 (Lift > 1) indique :",
+    "options": [
+      "A. Une indépendance statistique totale entre les ensembles",
+      "B. Une association positive, où la présence de X augmente la probabilité de présence de Y",
+      "C. Une association négative, suggérant que X et Y s'excluent mutuellement",
+      "D. Que le support de la règle est inférieur au minimum requis"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 24,
+    "theme": "Métriques d'évaluation",
+    "question": "Si le Lift d'une règle est égal à 1 (Lift = 1), que peut-on conclure sur les ensembles X et Y ?",
+    "options": [
+      "A. Ils sont parfaitement corrélés",
+      "B. Ils sont statistiquement indépendants",
+      "C. Ils sont disjoints mais fortement associés",
+      "D. Ils ne peuvent pas former une règle d'association valide"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 25,
+    "theme": "Métriques d'évaluation",
+    "question": "Un Lift inférieur à 1 (Lift < 1) suggère que :",
+    "options": [
+      "A. La présence de l'antécédent diminue la probabilité d'apparition du conséquent (corrélation négative)",
+      "B. La règle est statistiquement plus forte que la moyenne",
+      "C. La confiance est supérieure au support du conséquent",
+      "D. Les items apparaissent ensemble plus souvent que par pur hasard"
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 26,
+    "theme": "Métriques d'évaluation",
+    "question": "Dans la structure d'une règle X → Y, la condition de disjonction X ∩ Y = ∅ est nécessaire pour :",
+    "options": [
+      "A. Garantir que le support soit toujours positif",
+      "B. Éviter les règles triviales où un item impliquerait sa propre présence",
+      "C. Réduire la complexité temporelle du calcul du lift",
+      "D. Permettre l'usage de variables continues dans l'antécédent"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 27,
+    "theme": "Métriques d'évaluation",
+    "question": "La métrique de Support sert principalement à filtrer :",
+    "options": [
+      "A. Les règles peu fiables",
+      "B. Les règles statistiquement insignifiantes ou trop rares",
+      "C. Les règles ayant un lift proche de 1",
+      "D. Les transactions contenant trop d'items"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 28,
+    "theme": "Métriques d'évaluation",
+    "question": "Pourquoi la Confiance seule peut-elle être trompeuse pour évaluer une règle ?",
+    "options": [
+      "A. Elle ne prend pas en compte la fréquence de base du conséquent Y",
+      "B. Elle est mathématiquement instable sur de petites bases de données",
+      "C. Elle ne permet pas de distinguer l'antécédent du conséquent",
+      "D. Elle est toujours égale au Lift multiplié par le Support"
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 29,
+    "theme": "Métriques d'évaluation",
+    "question": "Une règle d'association générée par Apriori exprime :",
+    "options": [
+      "A. Une causalité déterministe entre les items",
+      "B. Une tendance statistique ou une co-occurrence observée",
+      "C. Une corrélation d'ordre supérieur dans un espace de Hilbert",
+      "D. Une loi physique immuable régissant les transactions"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 30,
+    "theme": "Métriques d'évaluation",
+    "question": "Quel est le risque associé à une règle possédant une Confiance élevée mais un Lift proche de 1 ?",
+    "options": [
+      "A. La règle est fausse et doit être supprimée",
+      "B. L'association apparente est probablement due au hasard (indépendance)",
+      "C. La règle est trop rare pour être exploitable",
+      "D. Le calcul du support a échoué"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 31,
+    "theme": "Fonctionnement algorithmique",
+    "question": "Quelle est l'étape initiale obligatoire de l'algorithme Apriori ?",
+    "options": [
+      "A. La génération de paires d'items (2-itemsets)",
+      "B. Le décompte du support des items individuels (1-itemsets)",
+      "C. Le partitionnement de la base de données en k clusters",
+      "D. Le calcul du lift de toutes les combinaisons possibles"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 32,
+    "theme": "Fonctionnement algorithmique",
+    "question": "L'algorithme Apriori est qualifié d'itératif « niveau par niveau » car :",
+    "options": [
+      "A. Il traite les transactions une par une jusqu'à épuisement",
+      "B. Il explore les itemsets de taille k avant de passer à ceux de taille k+1",
+      "C. Il augmente le seuil de support à chaque scan de la base",
+      "D. Il utilise des réseaux de neurones à plusieurs couches"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 33,
+    "theme": "Fonctionnement algorithmique",
+    "question": "Quel est le critère d'arrêt naturel de l'algorithme Apriori ?",
+    "options": [
+      "A. Lorsque le temps de calcul dépasse une limite prédéfinie",
+      "B. Lorsqu'aucun nouvel itemset fréquent ne peut plus être généré",
+      "C. Dès que 50 règles d'association ont été extraites",
+      "D. Lorsque le lift moyen des règles atteint son maximum"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 34,
+    "theme": "Fonctionnement algorithmique",
+    "question": "Dans l'étape de génération de candidats (k → k+1), comment sont formés les nouveaux itemsets ?",
+    "options": [
+      "A. Par sélection aléatoire dans la base transactionnelle",
+      "B. Par combinaison d'itemsets fréquents de taille k partageant un préfixe commun",
+      "C. Par union de tous les items non fréquents du niveau précédent",
+      "D. Par soustraction des items ayant un support maximal"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 35,
+    "theme": "Fonctionnement algorithmique",
+    "question": "L'étape de jointure (self-join) vise à produire :",
+    "options": [
+      "A. Des règles d'association à partir des 1-itemsets",
+      "B. Des candidats de taille k+1 potentiellement fréquents",
+      "C. Une base de données compressée au format binaire",
+      "D. Un index des transactions les plus longues"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 36,
+    "theme": "Fonctionnement algorithmique",
+    "question": "Qu'advient-il d'un candidat de taille k+1 si l'un de ses sous-ensembles n'a pas été validé comme fréquent au niveau k ?",
+    "options": [
+      "A. Son support est estimé par interpolation",
+      "B. Il est élagué avant même tout comptage du support (pruning)",
+      "C. Il est conservé uniquement si son lift est élevé",
+      "D. Il est marqué comme « itemset candidat faible »"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 37,
+    "theme": "Fonctionnement algorithmique",
+    "question": "À quel moment précis les règles d'association sont-elles générées ?",
+    "options": [
+      "A. Simultanément au calcul du support des 1-itemsets",
+      "B. Uniquement après l'identification complète de tous les itemsets fréquents",
+      "C. Avant l'étape d'élagage pour maximiser le nombre de règles",
+      "D. Lors de la phase de prétraitement One-Hot Encoding"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 38,
+    "theme": "Fonctionnement algorithmique",
+    "question": "Pourquoi l'algorithme doit-il effectuer plusieurs scans de la base de données ?",
+    "options": [
+      "A. Pour corriger les erreurs de mesure du support",
+      "B. Pour valider le support réel des candidats générés à chaque itération k",
+      "C. Pour s'assurer que les transactions sont triées par ordre alphabétique",
+      "D. Pour recalculer la taille de la matrice binaire"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 39,
+    "theme": "Fonctionnement algorithmique",
+    "question": "Le passage d'un itemset fréquent {A, B} à une règle d'association nécessite de :",
+    "options": [
+      "A. Calculer le support de {A} et {B} séparément",
+      "B. Évaluer la confiance de l'implication vis-à-vis du seuil min_confidence",
+      "C. Vérifier que A et B ne sont pas dans la même transaction",
+      "D. Normaliser le support par le logarithme du nombre d'items"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 40,
+    "theme": "Fonctionnement algorithmique",
+    "question": "Quel est l'ordre logique des opérations pour un niveau k donné ?",
+    "options": [
+      "A. Élagage → Jointure → Calcul du support",
+      "B. Jointure (Génération) → Élagage (Pruning) → Calcul du support (Scan)",
+      "C. Calcul du support → Génération de règles → Élagage",
+      "D. Scan de la base → Définition des seuils → Jointure"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 41,
+    "theme": "Hyperparamètres et performances",
+    "question": "Quel est l'effet technique d'un seuil min_support extrêmement bas sur la performance ?",
+    "options": [
+      "A. Une réduction de l'espace mémoire utilisé",
+      "B. Une explosion combinatoire du nombre de candidats et une augmentation drastique du temps de calcul",
+      "C. Une convergence accélérée vers les itemsets de grande taille",
+      "D. Une simplification des règles d'association extraites"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 42,
+    "theme": "Hyperparamètres et performances",
+    "question": "Comment réagit l'algorithme si le seuil min_confidence est fixé à une valeur très élevée ?",
+    "options": [
+      "A. Le nombre de règles générées diminue, ne conservant que les implications les plus robustes",
+      "B. Le temps de scan de la base de données augmente linéairement",
+      "C. L'élagage des itemsets fréquents devient impossible",
+      "D. Le support des items individuels est automatiquement recalculé"
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 43,
+    "theme": "Hyperparamètres et performances",
+    "question": "Quelle est la contrainte de formatage des données indispensable à l'exécution d'Apriori (via mXtend ou outils similaires) ?",
+    "options": [
+      "A. Les données doivent être normalisées entre 0 et 1 selon une loi normale",
+      "B. Les données doivent être encodées sous forme d'une matrice transactionnelle binaire (One-Hot Encoding)",
+      "C. Les données doivent être structurées en séries temporelles continues",
+      "D. Les items doivent être transformés en composantes principales (PCA)"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 44,
+    "theme": "Hyperparamètres et performances",
+    "question": "Pourquoi l'algorithme Apriori est-il jugé moins performant sur des bases de données dites « denses » ?",
+    "options": [
+      "A. Car le nombre d'itemsets fréquents devient massif, rendant l'étape de génération saturante",
+      "B. Car il ne peut pas traiter plus de 10 items par transaction",
+      "C. Car il nécessite une connexion internet permanente pour accéder aux métadonnées",
+      "D. Car la confiance des règles y est structurellement nulle"
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 45,
+    "theme": "Hyperparamètres et performances",
+    "question": "Dans l'évaluation de la performance d'Apriori, on privilégie :",
+    "options": [
+      "A. Le score F1 et la courbe AUC-ROC",
+      "B. Le temps de calcul, l'interprétabilité des règles et leur pertinence métier",
+      "C. L'erreur quadratique moyenne (MSE) des supports",
+      "D. La distance euclidienne entre les itemsets fréquents"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 46,
+    "theme": "Hyperparamètres et performances",
+    "question": "Un « mauvais » choix des hyperparamètres (seuils) peut aboutir à :",
+    "options": [
+      "A. Une corruption irréversible des données sources",
+      "B. Soit une absence totale de résultats, soit un volume de règles inexploitable par un humain",
+      "C. Un changement automatique du type d'apprentissage vers le supervisé",
+      "D. Une modification de la distribution de probabilité des items"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 47,
+    "theme": "Hyperparamètres et performances",
+    "question": "L'interprétabilité d'Apriori est due au fait que :",
+    "options": [
+      "A. Il utilise des fonctions d'activation non linéaires",
+      "B. Les règles produites sont des implications logiques simples (X → Y) intelligibles",
+      "C. Les résultats sont présentés sous forme de vecteurs de caractéristiques abstraits",
+      "D. L'algorithme fournit une explication probabiliste basée sur la densité de noyau"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 48,
+    "theme": "Hyperparamètres et performances",
+    "question": "Quelle caractéristique de la base de données influence le plus la consommation mémoire d'Apriori ?",
+    "options": [
+      "A. La couleur des étiquettes d'items",
+      "B. Le nombre total d'items distincts et la longueur maximale des transactions",
+      "C. La version du logiciel d'encodage binaire utilisé",
+      "D. L'ordre chronologique des transactions dans le fichier CSV"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 49,
+    "theme": "Hyperparamètres et performances",
+    "question": "Les métriques de classification classiques (Accuracy, Precision) ne sont pas applicables ici car :",
+    "options": [
+      "A. Il n'y a pas de variable cible (label) à prédire dans l'apprentissage non supervisé",
+      "B. Le support est une métrique supérieure en toute circonstance",
+      "C. Les règles d'association ne concernent que des données textuelles",
+      "D. L'algorithme Apriori est déterministe et non probabiliste"
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 50,
+    "theme": "Hyperparamètres et performances",
+    "question": "Que signifie la sensibilité d'Apriori aux « bases volumineuses » mentionnée dans la littérature ?",
+    "options": [
+      "A. L'algorithme perd en précision statistique sur les gros volumes",
+      "B. Le coût computationnel lié aux multiples scans de la base devient prohibitif",
+      "C. Les règles d'association deviennent illisibles après 1000 transactions",
+      "D. Le format One-Hot Encoding n'est plus supporté au-delà d'un seuil certain de lignes"
+    ],
+    "correct": "B"
+  }
+]

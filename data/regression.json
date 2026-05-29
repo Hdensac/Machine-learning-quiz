@@ -1,0 +1,592 @@
+[
+  {
+    "id": 1,
+    "theme": "Régression linéaire",
+    "question": "Quel est l'objectif principal d'une régression en Machine Learning ?",
+    "options": [
+      "A) Classer des données dans des catégories discrètes.",
+      "B) Prédire une valeur numérique continue.",
+      "C) Regrouper des données non étiquetées par similarité.",
+      "D) Réduire la dimensionnalité d'un dataset."
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 2,
+    "theme": "Régression linéaire",
+    "question": "Dans l'équation y = ax + b, que représente le coefficient 'a' ?",
+    "options": [
+      "A) L'ordonnée à l'origine.",
+      "B) L'erreur résiduelle.",
+      "C) La pente de la droite (coefficient directeur).",
+      "D) La variable cible."
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 3,
+    "theme": "Régression linéaire",
+    "question": "Quelle méthode mathématique est classiquement utilisée pour minimiser l'erreur dans une régression linéaire ?",
+    "options": [
+      "A) La descente de gradient stochastique.",
+      "B) La méthode des moindres carrés ordinaires (MCO).",
+      "C) L'algorithme K-NN.",
+      "D) L'entropie croisée."
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 4,
+    "theme": "Régression linéaire",
+    "question": "Qu'est-ce qu'un 'résidu' dans un modèle de régression ?",
+    "options": [
+      "A) La valeur prédite par le modèle.",
+      "B) La différence entre la valeur réelle et la valeur prédite.",
+      "C) Le coefficient de corrélation de Pearson.",
+      "D) Une variable aberrante supprimée du dataset."
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 5,
+    "theme": "Régression linéaire",
+    "question": "Le coefficient de détermination R2 permet de mesurer :",
+    "options": [
+      "A) L'erreur absolue moyenne.",
+      "B) La proportion de la variance expliquée par le modèle."
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 6,
+    "theme": "Régression linéaire",
+    "question": "Que signifie un R² proche de 1 ?",
+    "options": [
+      "A) Le modèle ne prédit rien du tout.",
+      "B) Le modèle explique très bien la variance des données.",
+      "C) Le modèle est en situation de sous-apprentissage total.",
+      "D) Les données sont distribuées de façon aléatoire."
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 7,
+    "theme": "Métriques d'évaluation",
+    "question": "Quelle métrique pénalise le plus lourdement les grandes erreurs ?",
+    "options": [
+      "A) MAE (Mean Absolute Error).",
+      "B) MSE (Mean Squared Error).",
+      "C) Le coefficient de corrélation.",
+      "D) L'ordonnée à l'origine."
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 8,
+    "theme": "Régression linéaire multiple",
+    "question": "En régression linéaire multiple, les variables X (i entre 0 et n) sont appelées :",
+    "options": [
+      "A) Variables dépendantes.",
+      "B) Variables explicatives ou prédicteurs.",
+      "C) Variables résiduelles.",
+      "D) Hyperparamètres."
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 9,
+    "theme": "Surapprentissage",
+    "question": "Quel est le risque majeur d'utiliser un modèle trop complexe (ex: polynôme de degré très élevé) ?",
+    "options": [
+      "A) Le sous-apprentissage (Underfitting).",
+      "B) Le surapprentissage (Overfitting).",
+      "C) Une convergence trop rapide.",
+      "D) La disparition du gradient."
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 10,
+    "theme": "Régularisation",
+    "question": "La régularisation 'Lasso' (L1) a la particularité de :",
+    "options": [
+      "A) Toujours augmenter la valeur des coefficients.",
+      "B) Pouvoir annuler certains coefficients (sélection de variables).",
+      "C) Ne fonctionner que sur les modèles non linéaires.",
+      "D) Réduire systématiquement le R2 à zéro."
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 11,
+    "theme": "Régularisation",
+    "question": "Quelle est la différence entre Ridge et Lasso ?",
+    "options": [
+      "A) Ridge utilise la valeur absolue des poids, Lasso le carré.",
+      "B) Ridge utilise le carré des poids (L2), Lasso la valeur absolue (L1)."
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 12,
+    "theme": "Descente de gradient",
+    "question": "Dans la descente de gradient, qu'est-ce que le 'Learning Rate' ?",
+    "options": [
+      "A) Le nombre de lignes traitées par seconde.",
+      "B) Un pas qui définit l'ampleur de la mise à jour des paramètres.",
+      "C) La précision finale visée par l'utilisateur.",
+      "D) Le temps total d'entraînement du modèle."
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 13,
+    "theme": "Descente de gradient",
+    "question": "Si le Learning Rate est trop élevé, que se passe-t-il ?",
+    "options": [
+      "A) Le modèle converge instantanément.",
+      "B) L'algorithme risque d'osciller ou de diverger sans trouver le minimum.",
+      "C) Le modèle devient automatiquement linéaire.",
+      "D) L'erreur résiduelle devient négative."
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 14,
+    "theme": "Descente de gradient",
+    "question": "Quel est l'intérêt de la 'Descente de Gradient Stochastique' (SGD) ?",
+    "options": [
+      "A) Elle est plus précise que la méthode Batch.",
+      "B) Elle est plus rapide sur de très grands jeux de données.",
+      "C) Elle garantit de trouver le minimum global à chaque fois.",
+      "D) Elle ne nécessite aucune fonction de coût."
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 15,
+    "theme": "Corrélation",
+    "question": "Une corrélation de -0.95 entre deux variables indique :",
+    "options": [
+      "A) Une absence totale de lien.",
+      "B) Une relation linéaire forte et inverse.",
+      "C) Une erreur de calcul.",
+      "D) Que la régression linéaire est impossible."
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 16,
+    "theme": "Outils Python",
+    "question": "Quelle bibliothèque Python est la plus utilisée pour créer ces modèles ?",
+    "options": [
+      "A) Django.",
+      "B) Scikit-learn.",
+      "C) BeautifulSoup.",
+      "D) Flask."
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 17,
+    "theme": "Outils Python",
+    "question": "Que fait la classe LinearRegression() de Scikit-learn par défaut ?",
+    "options": [
+      "A) Elle applique une régularisation Lasso.",
+      "B) Elle utilise la méthode des moindres carrés.",
+      "C) Elle transforme les données en polynômes."
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 18,
+    "theme": "Régression polynomiale",
+    "question": "En régression polynomiale, si on passe du degré 1 au degré 2, la droite devient :",
+    "options": [
+      "A) Plus courte.",
+      "B) Une courbe (parabole).",
+      "C) Horizontale.",
+      "D) Verticale."
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 19,
+    "theme": "Évaluation des modèles",
+    "question": "Pourquoi utilise-t-on train_test_split ?",
+    "options": [
+      "A) Pour doubler la quantité de données.",
+      "B) Pour évaluer le modèle sur des données qu'il n'a pas vues à l'entraînement.",
+      "C) Pour supprimer les doublons.",
+      "D) Pour accélérer le processeur."
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 20,
+    "theme": "Régularisation",
+    "question": "Qu'est-ce que l'ElasticNet ?",
+    "options": [
+      "A) Une base de données d'images.",
+      "B) Une combinaison des régularisations Ridge et Lasso.",
+      "C) Un type de réseau de neurones profond.",
+      "D) Un outil de visualisation graphique."
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 21,
+    "theme": "Biais-variance",
+    "question": "Le 'biais' dans un modèle de régression correspond à :",
+    "options": [
+      "A) L'erreur due à une trop grande complexité.",
+      "B) L'erreur due à des hypothèses trop simplistes (ex: modéliser une courbe par une droite).",
+      "C) La vitesse de calcul.",
+      "D) L'humeur du data scientist."
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 22,
+    "theme": "Biais-variance",
+    "question": "La variance élevée d'un modèle est souvent le signe de :",
+    "options": [
+      "A) Sous-apprentissage.",
+      "B) Surapprentissage.",
+      "C) Un dataset trop petit.",
+      "D) Une absence de bruit."
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 23,
+    "theme": "Visualisation",
+    "question": "Quel graphique permet le mieux de visualiser une corrélation entre deux variables continues ?",
+    "options": [
+      "A) Un diagramme en secteurs (camembert).",
+      "B) Un nuage de points (Scatter plot)."
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 24,
+    "theme": "Régression linéaire",
+    "question": "Que se passe-t-il si on met fit-intercept=False dans Scikit-learn ?",
+    "options": [
+      "A) Le modèle ne calcule pas d'erreur.",
+      "B) La droite est forcée de passer par l'origine (0,0).",
+      "C) Le modèle devient non linéaire.",
+      "D) L'algorithme s'arrête après une itération."
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 25,
+    "theme": "Métriques d'évaluation",
+    "question": "Quelle métrique est exprimée dans la même unité que la variable cible ?",
+    "options": [
+      "A) R².",
+      "B) RMSE (Root Mean Squared Error) ou MAE.",
+      "C) La variance.",
+      "D) Le coefficient de Pearson."
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 26,
+    "theme": "Régression non linéaire",
+    "question": "La régression non linéaire est nécessaire quand :",
+    "options": [
+      "A) On a plus de 1000 données.",
+      "B) La relation entre X et Y n'est pas une ligne droite.",
+      "C) On utilise Python au lieu de R.",
+      "D) On veut prédire des catégories 'Oui/Non'."
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 27,
+    "theme": "Notions de base",
+    "question": "Dans l'exemple des dépenses caloriques, la 'durée de l'exercice' est une variable :",
+    "options": [
+      "A) Dépendante.",
+      "B) Indépendante (explicative).",
+      "C) Qualitative.",
+      "D) Catégorielle."
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 28,
+    "theme": "Régression multiple",
+    "question": "Qu'est-ce que la multicolinéarité ?",
+    "options": [
+      "A) Quand le modèle a trop de données.",
+      "B) Quand les variables explicatives sont fortement corrélées entre elles.",
+      "C) Quand le R² est supérieur à 1.",
+      "D) Quand le modèle est entraîné sur deux ordinateurs."
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 29,
+    "theme": "Outils Python",
+    "question": "La méthode model.fit(X_train, y_train) sert à :",
+    "options": [
+      "A) Prédire les valeurs futures.",
+      "B) Entraîner le modèle sur les données.",
+      "C) Charger les bibliothèques."
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 30,
+    "theme": "Outils Python",
+    "question": "Quelle fonction permet de transformer des features en features polynomiales ?",
+    "options": [
+      "A) StandardScaler.",
+      "B) PolynomialFeatures.",
+      "C) LabelEncoder.",
+      "D) MinMaxScaler."
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 31,
+    "theme": "Biais-variance",
+    "question": "Un modèle avec un biais faible et une variance élevée est :",
+    "options": [
+      "A) En sous-apprentissage.",
+      "B) En surapprentissage.",
+      "C) Parfaitement généralisé.",
+      "D) Inutilisable car trop simple."
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 32,
+    "theme": "Fonction de coût",
+    "question": "La fonction de coût (Loss Function) sert à :",
+    "options": [
+      "A) Augmenter le temps de calcul.",
+      "B) Mesurer l'écart entre prédiction et réalité pour guider l'optimisation.",
+      "C) Stocker les données sur le disque.",
+      "D) Choisir le nom du modèle."
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 33,
+    "theme": "Métriques d'évaluation",
+    "question": "Quel est l'avantage du MAE par rapport au MSE ?",
+    "options": [
+      "A) Il est plus facile de dériver mathématiquement.",
+      "B) Il est moins sensible aux valeurs aberrantes (outliers).",
+      "C) Il donne toujours des résultats plus petits.",
+      "D) Il est intégré à Excel."
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 34,
+    "theme": "Régression multiple",
+    "question": "En régression multiple, si on ajoute une variable inutile, le R² aura tendance à :",
+    "options": [
+      "A) Chuter brutalement.",
+      "B) Rester stable ou augmenter légèrement (ce qui peut être trompeur).",
+      "C) Devenir négatif.",
+      "D) S'annuler."
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 35,
+    "theme": "Prétraitement des données",
+    "question": "Qu'est-ce qu'un 'Outlier' ?",
+    "options": [
+      "A) Une valeur manquante.",
+      "B) Une valeur aberrante ou atypique par rapport au reste des données.",
+      "C) Le résultat final d'une prédiction.",
+      "D) Un type de régression avancée."
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 36,
+    "theme": "Prétraitement des données",
+    "question": "Le 'Standard Scaling' (Normalisation) est recommandé avant une régression Ridge car :",
+    "options": [
+      "A) Il réduit la taille du fichier.",
+      "B) Il permet d'appliquer la pénalité équitablement sur toutes les variables.",
+      "C) Il transforme les données en texte.",
+      "D) Il supprime les colonnes inutiles."
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 37,
+    "theme": "Régression linéaire",
+    "question": "Dans y = β0 + β1X1 + ε, que représente ε ?",
+    "options": [
+      "A) L'ordonnée à l'origine.",
+      "B) Le terme d'erreur aléatoire (bruit).",
+      "C) La variable explicative principale.",
+      "D) Le coefficient de pente."
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 38,
+    "theme": "Classification",
+    "question": "La régression logistique, malgré son nom, est utilisée pour :",
+    "options": [
+      "A) La régression continue.",
+      "B) La classification.",
+      "C) Le clustering.",
+      "D) Le tri de fichiers."
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 39,
+    "theme": "Corrélation",
+    "question": "Quelle est la plage de valeurs possible pour le coefficient de corrélation de Pearson ?",
+    "options": [
+      "A) [-1, 1]",
+      "B) [-∞, +∞]"
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 40,
+    "theme": "Descente de gradient",
+    "question": "Le 'Batch Gradient Descent' utilise :",
+    "options": [
+      "A) Un seul exemple à la fois.",
+      "B) Tout le dataset pour chaque mise à jour des poids.",
+      "C) Des groupes de 32 exemples.",
+      "D) Uniquement des données de test."
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 41,
+    "theme": "Régularisation",
+    "question": "Quel hyperparamètre contrôle la force de la régularisation dans Ridge/Lasso ?",
+    "options": [
+      "A) Learning Rate.",
+      "B) Alpha.",
+      "C) N_estimators.",
+      "D) Max_depth."
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 42,
+    "theme": "Métriques d'évaluation",
+    "question": "Que signifie un coefficient de détermination R² = 0 ?",
+    "options": [
+      "A) Le modèle est parfait.",
+      "B) Le modèle se contente de prédire la moyenne des valeurs observées.",
+      "C) Le modèle a fait une erreur de division par zéro.",
+      "D) Toutes les prédictions sont à 100% fausses."
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 43,
+    "theme": "Régression non linéaire",
+    "question": "Pour modéliser une croissance exponentielle, on utilise souvent :",
+    "options": [
+      "A) Une régression linéaire simple.",
+      "B) Une transformation logarithmique suivie d'une régression linéaire.",
+      "C) Une suppression des données élevées.",
+      "D) Un algorithme de tri."
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 44,
+    "theme": "Outils Python",
+    "question": "La méthode model.predict(X_new) renvoie :",
+    "options": [
+      "A) Les coefficients du modèle.",
+      "B) Les estimations de Y pour les nouvelles entrées.",
+      "C) Le score R².",
+      "D) Une visualisation graphique."
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 45,
+    "theme": "Interprétabilité",
+    "question": "Pourquoi la régression linéaire est-elle dite 'interprétable' ?",
+    "options": [
+      "A) Parce qu'elle est rapide.",
+      "B) Parce qu'on peut lire l'influence de chaque variable via ses coefficients.",
+      "C) Parce qu'elle ne nécessite pas de mathématiques.",
+      "D) Parce qu'elle fonctionne sur Mac et Windows."
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 46,
+    "theme": "Sous-apprentissage",
+    "question": "Le 'sous-apprentissage' se reconnaît par :",
+    "options": [
+      "A) Une excellente performance sur le train, mauvaise sur le test.",
+      "B) Une mauvaise performance sur le train ET sur le test.",
+      "C) Un R² de 0.99 partout.",
+      "D) Un temps de calcul trop long."
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 47,
+    "theme": "Feature Engineering",
+    "question": "En IA, le terme 'Feature Engineering' désigne :",
+    "options": [
+      "A) La réparation de l'ordinateur.",
+      "B) La création ou transformation de variables pour améliorer le modèle.",
+      "C) Le téléchargement de données.",
+      "D) La rédaction du rapport final."
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 48,
+    "theme": "Applications",
+    "question": "Lequel n'est PAS un domaine d'application classique de la régression ?",
+    "options": [
+      "A) Prédiction des prix de l'immobilier.",
+      "B) Segmentation de clients (clustering).",
+      "C) Prévisions météorologiques.",
+      "D) Estimation de la demande d'électricité."
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 49,
+    "theme": "Régularisation",
+    "question": "Quel est l'effet d'un alpha très grand dans une régression Ridge ?",
+    "options": [
+      "A) Les coefficients tendent vers zéro (modèle très simple).",
+      "B) Le modèle devient extrêmement complexe.",
+      "C) L'erreur disparaît totalement.",
+      "D) Le modèle s'arrête de fonctionner."
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 50,
+    "theme": "Évaluation des modèles",
+    "question": "Pour évaluer la performance finale, on utilise généralement :",
+    "options": [
+      "A) Les données d'entraînement.",
+      "B) Les données de test.",
+      "C) Uniquement les valeurs aberrantes.",
+      "D) Les titres des colonnes."
+    ],
+    "correct": "B"
+  }
+]

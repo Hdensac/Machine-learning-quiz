@@ -1,0 +1,602 @@
+[
+  {
+    "id": 1,
+    "theme": "DBSCAN",
+    "question": "Que signifie l'acronyme DBSCAN ?",
+    "options": [
+      "A) Density-Based Spatial Clustering of Applications with Noise",
+      "B) Distance-Based Scanning Cluster Algorithm with Nodes",
+      "C) Dynamic Binary Spatial Clustering Algorithm with Normalization",
+      "D) Distributed Base Scanning Cluster for Automatic Networks"
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 2,
+    "theme": "DBSCAN",
+    "question": "Quels sont les deux hyperparamètres principaux de DBSCAN?",
+    "options": [
+      "A) k et distance",
+      "B) epsilon et MinPts",
+      "C) alpha et beta",
+      "D) n_clusters et max_iter"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 3,
+    "theme": "DBSCAN",
+    "question": "Que représente le paramètre epsilon dans DBSCAN ?",
+    "options": [
+      "A) Le nombre minimum de clusters",
+      "B) Le rayon du voisinage autour d'un point",
+      "C) Le nombre maximum d'itérations",
+      "D) Le seuil de bruit"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 4,
+    "theme": "DBSCAN",
+    "question": "Que représente le paramètre MinPts dans DBSCAN ?",
+    "options": [
+      "A) Le nombre maximum de clusters autorisés",
+      "B) Le nombre minimum de points pour former un cluster",
+      "C) Le nombre minimum de points dans le voisinage epsilon pour qu'un point soit un core point",
+      "D) Le nombre de dimensions de l'espace"
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 5,
+    "theme": "DBSCAN",
+    "question": "DBSCAN a été proposé pour la première fois par :",
+    "options": [
+      "A) Kaufman et Rousseeuw",
+      "B) Ester, Kriegel, Sander et Xu",
+      "C) MacQueen",
+      "D) Ward"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 6,
+    "theme": "DBSCAN",
+    "question": "En quelle année DBSCAN a-t-il été publié ?",
+    "options": [
+      "A) 1990",
+      "B) 1996",
+      "C) 2001",
+      "D) 2008"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 7,
+    "theme": "DBSCAN",
+    "question": "DBSCAN appartient à quelle famille d'algorithmes de clustering?",
+    "options": [
+      "A) Clustering hiérarchique",
+      "B) Clustering basé sur la densité",
+      "C) Clustering basé sur les centroïdes",
+      "D) Clustering à grille"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 8,
+    "theme": "DBSCAN",
+    "question": "Quels sont les trois types de points définis par DBSCAN ?",
+    "options": [
+      "A) Centroid, Border, Outlier",
+      "B) Core, Border, Noise",
+      "C) Major, Minor, Neutral",
+      "D) Dense, Sparse, Medium"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 9,
+    "theme": "DBSCAN",
+    "question": "Un point est un 'core point' si :",
+    "options": [
+      "A) Il a le moins de voisins possibles",
+      "B) Son voisinage de rayon epsilon contient au moins MinPts (lui-même inclus)",
+      "C) Il est situé exactement au centre géométrique du dataset",
+      "D) Il est isolé des autres points"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 10,
+    "theme": "DBSCAN",
+    "question": "Un point est un 'border point' si :",
+    "options": [
+      "A) Il a plus de voisins que le core point",
+      "B) Il n'est pas un core point, mais il est situé dans le voisinage epsilon d'un core point",
+      "C) Il a exactement zéro voisin",
+      "D) Il change de cluster à chaque itération"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 11,
+    "theme": "DBSCAN",
+    "question": "Un point est considéré comme du 'noise' (bruit) si :",
+    "options": [
+      "A) Il appartient à tous les clusters en même temps",
+      "B) Il n'est ni un core point, ni un border point",
+      "C) Il a exactement MinPts voisins",
+      "D) Sa distance au centre est maximale"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 12,
+    "theme": "DBSCAN",
+    "question": "Si on augmente la valeur de epsilon tout en gardant MinPts constant, que se passe-t-il généralement ?",
+    "options": [
+      "A) Le nombre de points de bruit augmente",
+      "B) Le nombre de core points augmente et les clusters ont tendance à fusionner",
+      "C) Les clusters se divisent en sous-clusters",
+      "D) L'algorithme s'arrête immédiatement"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 13,
+    "theme": "DBSCAN",
+    "question": "Si on augmente fortement la valeur de MinPts, que se passe-t-il ?",
+    "options": [
+      "A) Davantage de points sont classés comme du bruit (noise)",
+      "B) Tous les points deviennent des core points",
+      "C) Le rayon epsilon augmente automatiquement",
+      "D) Il y aura plus de clusters formés"
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 14,
+    "theme": "DBSCAN",
+    "question": "Qu'est-ce que la relation de 'directe atteignabilité par densité' (directly density-reachable) ?",
+    "options": [
+      "A) Un point p est directement atteignable depuis q si p est à une distance supérieure à epsilon",
+      "B) Un point p est directement atteignable depuis un core point q si p est dans le voisinage epsilon de q",
+      "C) Deux points quelconques sont toujours directement atteignables",
+      "D) C'est une relation qui ne s'applique qu'aux points de bruit"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 15,
+    "theme": "DBSCAN",
+    "question": "La relation de 'directe atteignabilité' est-elle toujours symétrique ?",
+    "options": [
+      "A) Oui, toujours",
+      "B) Non, un border point peut être atteignable depuis un core point, mais l'inverse n'est pas vrai",
+      "C) Non, elle n'est jamais symétrique",
+      "D) Uniquement pour les points de bruit"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 16,
+    "theme": "DBSCAN",
+    "question": "Quand dit-on que deux points p et q sont 'connectés par densité' (density-connected) ?",
+    "options": [
+      "A) S'ils ont la même valeur de coordonnée X",
+      "B) S'il existe un point o tel que p et q soient tous deux atteignables par densité depuis o",
+      "C) S'ils sont séparés par du bruit",
+      "D) S'ils ont moins de MinPts voisins en commun"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 17,
+    "theme": "DBSCAN",
+    "question": "La connectivité par densité (density-connected) est-elle symétrique ?",
+    "options": [
+      "A) Non, jamais",
+      "B) Oui, contrairement à l'atteignabilité simple",
+      "C) Uniquement si epsilon est égal à 1",
+      "D) Seulement pour les datasets de taille inférieure à 100 points"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 18,
+    "theme": "DBSCAN",
+    "question": "Comment DBSCAN définit-il un cluster ?",
+    "options": [
+      "A) Un ensemble de points maximaux connectés par densité",
+      "B) Un groupe de points ayant le même centroïde",
+      "C) Un cercle parfait de rayon epsilon",
+      "D) Une collection de points de bruit"
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 19,
+    "theme": "DBSCAN",
+    "question": "Lequel de ces avantages est un point fort majeur de DBSCAN par rapport à K-Means ?",
+    "options": [
+      "A) Il nécessite de spécifier le nombre de clusters à l'avance",
+      "B) Il peut découvrir des clusters de formes arbitraires (non sphériques)",
+      "C) Il fonctionne de manière optimale sur des densités très variables",
+      "D) Il est beaucoup plus rapide sur les données de dimension 1000"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 20,
+    "theme": "DBSCAN",
+    "question": "Comment DBSCAN gère-t-il les valeurs aberrantes (outliers) ?",
+    "options": [
+      "A) Il les force à intégrer le cluster le plus proche",
+      "B) Il les identifie explicitement comme des points de bruit (noise)",
+      "C) Il remplace leurs coordonnées par la moyenne globale",
+      "D) Il crée un cluster spécifique pour chaque outlier"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 21,
+    "theme": "DBSCAN",
+    "question": "Faut-il spécifier le nombre de clusters à l'avance avec DBSCAN ?",
+    "options": [
+      "A) Oui, via le paramètre n_clusters",
+      "B) Non, DBSCAN détermine le nombre de clusters de manière autonome",
+      "C) Uniquement si les données sont en 2D",
+      "D) Oui, c'est obligatoire"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 22,
+    "theme": "DBSCAN",
+    "question": "Quelle est la complexité temporelle de DBSCAN dans le pire des cas (sans indexation spatiale) ?",
+    "options": [
+      "A) O(n)",
+      "B) O(n log n)",
+      "C) O(n²)",
+      "D) O(2^n)"
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 23,
+    "theme": "DBSCAN",
+    "question": "Si on utilise une structure d'indexation spatiale comme un KD-Tree ou un R-Tree, à combien peut descendre la complexité temporelle ?",
+    "options": [
+      "A) O(1)",
+      "B) O(n log n)",
+      "C) O(n)",
+      "D) O(n³)"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 24,
+    "theme": "DBSCAN",
+    "question": "Quelle est la principale faiblesse de DBSCAN ?",
+    "options": [
+      "A) Il ne sait pas traiter les données en 2D",
+      "B) Il a des difficultés à identifier des clusters lorsque les densités sont très variables",
+      "C) Il est extrêmement sensible à l'initialisation aléatoire des centroïdes",
+      "D) Il génère toujours le même nombre de clusters peu importe les paramètres"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 25,
+    "theme": "DBSCAN",
+    "question": "Face à des données de très grande dimension (ex: texte, gènes), DBSCAN fait face à :",
+    "options": [
+      "A) Une accélération de ses calculs",
+      "B) La 'malédiction de la dimensionnalité' (les distances deviennent peu significatives)",
+      "C) Un manque de mémoire systématique car il doit stocker des arbres binaires",
+      "D) Une réduction automatique de la dimension"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 26,
+    "theme": "DBSCAN",
+    "question": "Quelle méthode graphique est classiquement recommandée pour aider à choisir la valeur de epsilon ?",
+    "options": [
+      "A) La méthode du coude (Elbow) basée sur l'inertie",
+      "B) Le graphique des k-distances triées (k-distance plot)",
+      "C) Le dendrogramme",
+      "D) La courbe ROC"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 27,
+    "theme": "DBSCAN",
+    "question": "Dans un k-distance plot pour estimer epsilon, quelle valeur de 'k' choisit-on généralement ?",
+    "options": [
+      "A) k = n (nombre total de points)",
+      "B) k = MinPts - 1 (souvent k=4 pour des données 2D)",
+      "C) k = 1 toujours",
+      "D) k = n_clusters"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 28,
+    "theme": "DBSCAN",
+    "question": "Sur un k-distance plot, où cherche-t-on la valeur optimale de epsilon ?",
+    "options": [
+      "A) Au point le plus bas de la courbe",
+      "B) Au niveau de la zone d'inflexion maximale (le 'coude' ou la courbure nette)",
+      "C) À la valeur maximale possible",
+      "D) À l'origine du graphique"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 29,
+    "theme": "DBSCAN",
+    "question": "Pour des données bidimensionnelles (2D), quelle est la valeur par défaut de MinPts couramment suggérée dans la littérature ?",
+    "options": [
+      "A) MinPts = 1",
+      "B) MinPts = 4",
+      "C) MinPts = 100",
+      "D) MinPts = n / 2"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 30,
+    "theme": "DBSCAN",
+    "question": "Pour des données bruyantes ou de grande dimension, il est conseillé de choisir MinPts :",
+    "options": [
+      "A) Égal à 2",
+      "B) Plus grand (ex: MinPts >= 2 * dimension)",
+      "C) Égal à 0",
+      "D) Plus petit que pour des données propres"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 31,
+    "theme": "DBSCAN",
+    "question": "Quelle métrique de distance par défaut utilise-t-on le plus souvent avec DBSCAN ?",
+    "options": [
+      "A) Distance de Manhattan",
+      "B) Distance Euclidienne",
+      "C) Similarité Cosinus",
+      "D) Distance de Jaccard"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 32,
+    "theme": "DBSCAN",
+    "question": "Si l'on change la métrique de distance (ex: de Euclidienne à Manhattan), que se passe-t-il pour le voisinage epsilon ?",
+    "options": [
+      "A) La forme géométrique du voisinage change (ex: d'un disque à un losange)",
+      "B) L'algorithme ne fonctionne plus",
+      "C) Le nombre de points reste obligatoirement identique",
+      "D) MinPts doit être multiplié par 2"
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 33,
+    "theme": "DBSCAN",
+    "question": "Pourquoi est-il crucial de normaliser/centrer-réduire les variables avant d'appliquer DBSCAN ?",
+    "options": [
+      "A) Pour accélérer le chargement des données",
+      "B) Parce que DBSCAN est sensible aux différences d'échelles entre les variables lors du calcul des distances",
+      "C) Pour supprimer automatiquement les variables catégorielles",
+      "D) Parce que scikit-learn l'impose par une erreur bloquante"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 34,
+    "theme": "DBSCAN",
+    "question": "Qu'est-ce qui caractérise un 'core point' par rapport à un 'border point' dans la structure finale ?",
+    "options": [
+      "A) Seul le core point peut étendre un cluster en y rattachant de nouveaux points atteignables",
+      "B) Le border point est toujours au centre du cluster",
+      "C) Le core point est considéré comme du bruit",
+      "D) Il n'y a aucune différence algorithmique"
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 35,
+    "theme": "DBSCAN",
+    "question": "Si deux clusters distincts sont très proches, quelle erreur de paramétrage a pu causer leur fusion ?",
+    "options": [
+      "A) Un epsilon trop petit",
+      "B) Un epsilon trop grand",
+      "C) Un MinPts trop grand",
+      "D) Une normalisation MinMax"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 36,
+    "theme": "DBSCAN",
+    "question": "Si DBSCAN classe la quasi-totalité des points d'un dataset comme du bruit (noise), c'est probablement parce que :",
+    "options": [
+      "A) Epsilon est trop grand et MinPts est trop petit",
+      "B) Epsilon est trop petit et/ou MinPts est trop grand",
+      "C) Le dataset contient trop de clusters",
+      "D) L'indexation spatiale a échoué"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 37,
+    "theme": "DBSCAN",
+    "question": "Dans quel cas l'ordre de traitement des points dans DBSCAN peut-il affecter légèrement le résultat ?",
+    "options": [
+      "A) Pour l'attribution des core points",
+      "B) Pour l'attribution de certains border points situés à la frontière de deux clusters différents",
+      "C) Pour la détection des points de bruit isolés",
+      "D) L'ordre n'affecte jamais rien"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 38,
+    "theme": "DBSCAN",
+    "question": "Peut-on utiliser DBSCAN pour faire de la détection d'anomalies ?",
+    "options": [
+      "A) Non, c'est uniquement pour le clustering",
+      "B) Oui, en considérant les points étiquetés comme 'bruit' (noise) comme des anomalies",
+      "C) Oui, mais seulement si le dataset a moins de 3 variables",
+      "D) Uniquement en combinaison avec une régression logistique"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 39,
+    "theme": "DBSCAN",
+    "question": "Quel algorithme a été développé pour surmonter la difficulté de DBSCAN à gérer des densités variables ?",
+    "options": [
+      "A) K-Means++",
+      "B) OPTICS",
+      "C) AGNES",
+      "D) PCA"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 40,
+    "theme": "DBSCAN",
+    "question": "Quelle est la mémoire requise par DBSCAN si on stocke une matrice de distance complète ?",
+    "options": [
+      "A) O(n)",
+      "B) O(n²)",
+      "C) O(1)",
+      "D) O(log n)"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 41,
+    "theme": "DBSCAN",
+    "question": "Si MinPts est fixé à 1, qu'arrive-t-il à chaque point du dataset ?",
+    "options": [
+      "A) Tous les points deviennent du bruit",
+      "B) Chaque point devient un core point et forme son propre cluster",
+      "C) L'algorithme plante avec une division par zéro",
+      "D) Le résultat est identique à K-Means avec K=1"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 42,
+    "theme": "DBSCAN",
+    "question": "DBSCAN nécessite-t-il une phase d'initialisation aléatoire ?",
+    "options": [
+      "A) Oui, pour choisir les premiers germes",
+      "B) Non, il parcourt les points de manière séquentielle ou via un index sans tirage aléatoire de centres",
+      "C) Uniquement si on utilise la distance de Manhattan",
+      "D) Oui, tout comme K-Means"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 43,
+    "theme": "DBSCAN",
+    "question": "DBSCAN peut-il trouver des clusters imbriqués (un cluster en forme de cercle entourant un autre cluster) ?",
+    "options": [
+      "A) Non, aucun algorithme ne sait faire cela",
+      "B) Oui, c'est une de ses forces par rapport aux méthodes basées sur la distance aux centres",
+      "C) Uniquement si MinPts est très petit",
+      "D) Non, il est limité aux clusters sphériques"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 44,
+    "theme": "DBSCAN",
+    "question": "Quel algorithme de clustering est le plus similaire à DBSCAN en termes de principe ?",
+    "options": [
+      "A) K-Means",
+      "B) Clustering Agglomératif",
+      "C) OPTICS",
+      "D) GMM (Gaussian Mixture Model)"
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 45,
+    "theme": "DBSCAN",
+    "question": "Dans DBSCAN, deux core points appartiennent au même cluster si et seulement si :",
+    "options": [
+      "A) Ils sont directement atteignables",
+      "B) Ils sont dans le même voisinage l'un de l'autre",
+      "C) Ils sont connectés par densité (density-connected)",
+      "D) Leur distance est inférieure à 28"
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 46,
+    "theme": "DBSCAN",
+    "question": "DBSCAN est-il déterministe?",
+    "options": [
+      "A) Non, jamais",
+      "B) Oui pour les core points; les border points peuvent varier selon l'ordre de traitement",
+      "C) Oui, toujours et entièrement",
+      "D) Non, il dépend d'une initialisation aléatoire"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 47,
+    "theme": "DBSCAN",
+    "question": "Quelle bibliothèque Python implémente DBSCAN nativement?",
+    "options": [
+      "A) TensorFlow",
+      "B) scikit-learn",
+      "C) NLTK",
+      "D) Statsmodels"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 48,
+    "theme": "DBSCAN",
+    "question": "Dans scikit-learn, quel attribut de l'objet DBSCAN retourne les labels de clusters ?",
+    "options": [
+      "A) dbscan.clusters_",
+      "B) dbscan.labels_",
+      "C) dbscan.assignments_",
+      "D) dbscan.groups_"
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 49,
+    "theme": "DBSCAN",
+    "question": "Quel est le label attribué aux points de bruit dans l'implémentation scikit-learn de DBSCAN?",
+    "options": [
+      "A) 0",
+      "B) None",
+      "C) -1",
+      "D) NaN"
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 50,
+    "theme": "DBSCAN",
+    "question": "Laquelle de ces affirmations sur DBSCAN est FAUSSE ?",
+    "options": [
+      "A) Il gère efficacement le bruit",
+      "B) Il nécessite de définir à l'avance la forme géométrique des clusters",
+      "C) Il dépend fortement du choix des paramètres métriques",
+      "D) Il est basé sur la connectivité par densité"
+    ],
+    "correct": "B"
+  }
+]
