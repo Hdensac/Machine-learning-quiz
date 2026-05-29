@@ -11,13 +11,14 @@ const THEMES_CONFIG = {
   svm: { file: 'svm.json', name: 'SVM (Support Vector Machines)', gradient: 'gradient-svm', glow: 'glow-svm' },
   appriori: { file: 'appriori.json', name: 'Algorithme Apriori', gradient: 'gradient-appriori', glow: 'glow-appriori' },
   pca: { file: 'pca.json', name: 'ACP (Analyse en Composantes Principales)', gradient: 'gradient-pca', glow: 'glow-pca' },
-  regression: { file: 'regression.json', name: 'Régression Linéaire & Logistique', gradient: 'gradient-regression', glow: 'glow-regression' }
+  regression: { file: 'regression.json', name: 'Régression Linéaire & Logistique', gradient: 'gradient-regression', glow: 'glow-regression' },
+  ultimate: { file: '', name: 'Quiz Ultime (Multi-thèmes)', gradient: 'gradient-svm', glow: 'glow-svm' }
 };
 
 // État global de l'application
 const state = {
-  currentThemeId: null,      // ex: 'svm', 'dbscan'
-  originalQuestions: [],     // Liste complète des 50 questions d'origine
+  currentThemeId: null,      // ex: 'svm', 'dbscan', 'ultimate'
+  originalQuestions: [],     // Liste complète des questions d'origine du quiz actif
   questions: [],             // Liste des questions du quiz actif (peut être filtrée en remédiation)
   userAnswers: {},           // Format: { questionId: ['A', 'C'] }
   flaggedQuestions: new Set(), // IDs des questions marquées pour révision
@@ -42,6 +43,8 @@ function initHomeScreen() {
   cardsContainer.innerHTML = '';
 
   Object.entries(THEMES_CONFIG).forEach(([themeId, config]) => {
+    if (themeId === 'ultimate') return; // Ne pas afficher dans la grille standard
+    
     const bestScore = localStorage.getItem(`best_score_${themeId}`);
     const scoreText = bestScore !== null ? `${bestScore} / 50` : 'Non tenté';
     
@@ -75,6 +78,10 @@ function initHomeScreen() {
     cardsContainer.insertAdjacentHTML('beforeend', cardHtml);
   });
   
+  // Afficher le meilleur score du Quiz Ultime sur sa bannière
+  const ultimateBest = localStorage.getItem('best_score_ultimate');
+  document.getElementById('ultimate-best-score').textContent = ultimateBest !== null ? `${ultimateBest} / 20` : 'Non tenté';
+  
   updateGlobalStats();
 }
 
@@ -105,7 +112,8 @@ async function startQuiz(themeId, customQuestions = null) {
     
     if (customQuestions) {
       // Cas du mode Remédiation : on injecte la sélection filtrée
-      state.questions = customQuestions;
+      // On mélange l'ordre des questions de remédiation pour briser la mémorisation
+      state.questions = shuffleArray([...customQuestions]);
       state.isRemediationMode = true;
       // Temps adapté : 24 secondes par question, minimum 2 minutes
       state.timeRemaining = Math.max(120, state.questions.length * 24);
@@ -116,9 +124,9 @@ async function startQuiz(themeId, customQuestions = null) {
       if (!response.ok) throw new Error('Impossible de charger les questions');
       
       const data = await response.json();
-      // On s'assure qu'on a bien nos questions ordonnées
-      state.originalQuestions = data;
-      state.questions = [...data];
+      // Préparation : Mélange des options, ajustement des réponses, et mélange des questions
+      state.originalQuestions = prepareAndShuffleQuiz(data);
+      state.questions = [...state.originalQuestions];
       state.isRemediationMode = false;
       state.timeRemaining = 1200; // 20 minutes
       state.totalDuration = 1200;
@@ -143,6 +151,113 @@ async function startQuiz(themeId, customQuestions = null) {
   } catch (error) {
     console.error(error);
     alert(`Erreur de chargement : assurez-vous de faire tourner le serveur local (README.md) pour charger les données.`);
+  } finally {
+    showLoading(false);
+  }
+}
+
+// --- LANCEMENT DU QUIZ ULTIME (20 QUESTIONS MÉLANGÉES) ---
+async function startUltimateQuiz() {
+  showLoading(true);
+  
+  try {
+    state.currentThemeId = 'ultimate';
+    state.isRemediationMode = false;
+    
+    // 1. Fetch de tous les thèmes en parallèle (exclure 'ultimate' de l'itération)
+    const fetchPromises = Object.entries(THEMES_CONFIG)
+      .filter(([themeId]) => themeId !== 'ultimate')
+      .map(([themeId, config]) => {
+        return fetch(`data/${config.file}`)
+          .then(res => {
+            if (!res.ok) throw new Error(`Erreur lors du chargement du thème ${themeId}`);
+            return res.json();
+          })
+          .then(data => ({ themeId, questions: data }));
+      });
+      
+    const results = await Promise.all(fetchPromises);
+    
+    // 2. Tirage des questions selon la distribution {3, 4, 3, 4, 3, 3}
+    const distribution = {
+      dbscan: 3,
+      arbre_decision: 4,
+      svm: 3,
+      appriori: 4,
+      pca: 3,
+      regression: 3
+    };
+    
+    let ultimateQuestions = [];
+    
+    results.forEach(({ themeId, questions }) => {
+      const countToDraw = distribution[themeId] || 3;
+      // Deep copy et mélange du pool de questions du thème
+      const pool = shuffleArray([...questions]);
+      // Sélection des N premières questions
+      const selected = pool.slice(0, countToDraw);
+      
+      // Préparation individuelle de chaque question (mélange des options)
+      const preparedSelected = selected.map(q => {
+        const parsedOptions = q.options.map(opt => {
+          const parsed = parseOption(opt);
+          const isCorrect = Array.isArray(q.correct)
+            ? q.correct.includes(parsed.key)
+            : q.correct === parsed.key;
+          return { text: parsed.text, isCorrect };
+        });
+        
+        shuffleArray(parsedOptions);
+        
+        const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        const newOptions = [];
+        const newCorrect = [];
+        
+        parsedOptions.forEach((opt, idx) => {
+          const letter = alphabet[idx] || String.fromCharCode(65 + idx);
+          newOptions.push(`${letter}. ${opt.text}`);
+          if (opt.isCorrect) {
+            newCorrect.push(letter);
+          }
+        });
+        
+        return {
+          ...q,
+          options: newOptions,
+          correct: Array.isArray(q.correct) ? newCorrect : (newCorrect[0] || '')
+        };
+      });
+      
+      ultimateQuestions.push(...preparedSelected);
+    });
+    
+    // 3. Mélanger l'ordre global des 20 questions (intervertir les thèmes aléatoirement)
+    shuffleArray(ultimateQuestions);
+    
+    state.originalQuestions = ultimateQuestions;
+    state.questions = [...state.originalQuestions];
+    state.timeRemaining = 480; // 8 minutes (20 questions * 24 secondes)
+    state.totalDuration = 480;
+    
+    // Réinitialisation des réponses et variables d'état
+    state.userAnswers = {};
+    state.flaggedQuestions.clear();
+    state.currentQuestionIndex = 0;
+    
+    // Basculer l'affichage vers l'écran du quiz
+    switchScreen('home-screen', 'quiz-screen');
+    
+    // Initialiser les composants UI du quiz
+    initQuizHeader();
+    renderQuestionNavigator();
+    renderCurrentQuestion();
+    
+    // Lancer le timer
+    startTimer();
+    
+  } catch (error) {
+    console.error(error);
+    alert(`Erreur de chargement du Quiz Ultime : assurez-vous de faire tourner le serveur local.`);
   } finally {
     showLoading(false);
   }
@@ -607,6 +722,12 @@ function renderResults() {
     remedBtn.textContent = 'Refaire les questions manquées';
   }
   
+  // Mettre à jour le bouton filtre "Toutes" avec le total dynamique
+  const filterAllBtn = document.querySelector('.filter-btn[data-filter="all"]');
+  if (filterAllBtn) {
+    filterAllBtn.textContent = `Toutes (${total})`;
+  }
+  
   // Rendre le récapitulatif détaillé
   renderReviewList('all');
 }
@@ -757,8 +878,9 @@ function renderReviewList(filter = 'all') {
 
 // --- REMÉDIATION ET RETENTATIVE ---
 function triggerRemediation() {
-  // Sélectionner toutes les questions manquées
-  const missedQuestions = state.originalQuestions.filter(q => {
+  // Sélectionner uniquement les questions manquées dans le tour qui vient de finir.
+  // En remédiation, state.questions contient déjà le sous-ensemble ciblé.
+  const missedQuestions = state.questions.filter(q => {
     const expected = q.correct;
     const user = state.userAnswers[q.id] || [];
     
@@ -859,4 +981,74 @@ function bindGlobalEvents() {
       renderReviewList(filter);
     }
   });
+}
+
+// --- SHUFFLING & PARSING ALGORITHMS ---
+
+/**
+ * Mélange un tableau sur place avec l'algorithme de Fisher-Yates.
+ */
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+
+/**
+ * Extrait la lettre clé et le texte d'une option.
+ * supporte "A. Option", "A) Option", "A - Option", etc.
+ */
+function parseOption(optionStr) {
+  const match = optionStr.trim().match(/^([A-Za-z0-9]+)[\s\.\)\-]\s*(.*)$/);
+  if (match) {
+    return { key: match[1], text: match[2] };
+  }
+  return { key: optionStr.trim().charAt(0), text: optionStr.trim().substring(1).trim() };
+}
+
+/**
+ * Prépare et mélange le quiz :
+ * 1. Mélange les options de chaque question et réajuste la/les bonne(s) réponse(s).
+ * 2. Mélange l'ordre global des questions.
+ */
+function prepareAndShuffleQuiz(questions) {
+  const copiedQuestions = questions.map(q => {
+    // Parser les options et évaluer si elles sont correctes
+    const parsedOptions = q.options.map(opt => {
+      const parsed = parseOption(opt);
+      const isCorrect = Array.isArray(q.correct)
+        ? q.correct.includes(parsed.key)
+        : q.correct === parsed.key;
+      return { text: parsed.text, isCorrect };
+    });
+    
+    // Mélanger les options
+    shuffleArray(parsedOptions);
+    
+    // Reconstruire les options avec de nouvelles lettres et les nouvelles clés de réponses correctes
+    const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    const newOptions = [];
+    const newCorrect = [];
+    
+    parsedOptions.forEach((opt, idx) => {
+      const letter = alphabet[idx] || String.fromCharCode(65 + idx);
+      newOptions.push(`${letter}. ${opt.text}`);
+      if (opt.isCorrect) {
+        newCorrect.push(letter);
+      }
+    });
+    
+    return {
+      ...q,
+      options: newOptions,
+      correct: Array.isArray(q.correct) ? newCorrect : (newCorrect[0] || '')
+    };
+  });
+  
+  // Mélanger l'ordre des questions elles-mêmes
+  shuffleArray(copiedQuestions);
+  
+  return copiedQuestions;
 }

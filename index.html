@@ -74,6 +74,31 @@
         </p>
       </div>
 
+      <!-- Section Quiz Ultime -->
+      <div id="ultimate-quiz-banner" class="glass-panel border-amber-500/30 rounded-3xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl relative overflow-hidden group mb-8">
+        <!-- Fond décoratif lumineux -->
+        <div class="absolute -right-24 -top-24 w-48 h-48 rounded-full bg-amber-500/10 blur-3xl group-hover:bg-amber-500/20 transition-all duration-300"></div>
+        
+        <div class="space-y-2">
+          <div class="flex items-center gap-3">
+            <span class="w-2.5 h-2.5 rounded-full bg-amber-500 animate-ping"></span>
+            <span class="text-xs font-mono uppercase tracking-widest text-amber-400 font-semibold">Défi Suprême</span>
+          </div>
+          <h2 class="text-2xl font-bold font-outfit text-slate-100">Le Quiz Ultime</h2>
+          <p class="text-sm text-slate-400 max-w-xl leading-relaxed">
+            Affrontez une sélection de 20 questions tirées aléatoirement des 6 thèmes (3 ou 4 questions par thème), mélangées aléatoirement. Temps limité : 8 minutes !
+          </p>
+          <div class="text-xs text-slate-500 mt-2 flex items-center gap-1.5">
+            <span>Meilleur score :</span>
+            <span id="ultimate-best-score" class="font-bold text-amber-400">Non tenté</span>
+          </div>
+        </div>
+        
+        <button onclick="startUltimateQuiz()" class="px-6 py-3 font-bold text-sm text-slate-950 bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 hover:from-amber-300 hover:to-yellow-400 rounded-xl shadow-lg shadow-amber-500/20 active:scale-[0.98] transition-all whitespace-nowrap">
+          Lancer le Défi ⚡
+        </button>
+      </div>
+
       <!-- Grille des thèmes -->
       <div class="space-y-6">
         <div class="flex items-center justify-between border-b border-slate-900 pb-3">
