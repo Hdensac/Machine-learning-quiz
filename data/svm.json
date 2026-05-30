@@ -4,10 +4,10 @@
     "theme": "Définitions SVM",
     "question": "Que signifie l'acronyme SVM ?",
     "options": [
-      "A. Sequential Vector Machine",
-      "B. Support Vector Machine",
-      "C. Supervised Variable Model",
-      "D. Stochastic Variance Method"
+      "A. Sequential Vector Machine — un modèle séquentiel pour séries temporelles auto-régressives.",
+      "B. Support Vector Machine — un classifieur supervisé à marge maximale, développé par Vapnik.",
+      "C. Supervised Variable Model — un modèle linéaire généralisé avec variables instrumentales.",
+      "D. Stochastic Variance Method — une technique de réduction de variance par échantillonnage stratifié."
     ],
     "correct": "B"
   },
@@ -16,10 +16,10 @@
     "theme": "Définitions SVM",
     "question": "Le SVM est un algorithme de :",
     "options": [
-      "A. Apprentissage non supervisé",
-      "B. Apprentissage par renforcement",
-      "C. Apprentissage supervisé",
-      "D. Clustering"
+      "A. Apprentissage non supervisé — car il trouve naturellement des clusters dans les données.",
+      "B. Apprentissage par renforcement — il optimise une politique de décision par essais-erreurs.",
+      "C. Apprentissage supervisé — il nécessite des données étiquetées pour apprendre la frontière.",
+      "D. Réduction dimensionnelle — il projette les données sur l'hyperplan de plus grande variance."
     ],
     "correct": "C"
   },
@@ -28,10 +28,10 @@
     "theme": "Définitions SVM",
     "question": "Qui a introduit le SVM ?",
     "options": [
-      "A. Geoffrey Hinton",
-      "B. Yann LeCun",
-      "C. Vladimir Vapnik",
-      "D. Andrew Ng"
+      "A. Geoffrey Hinton — pionnier des réseaux de neurones profonds et du rétropropagation.",
+      "B. Yann LeCun — inventeur des réseaux convolutifs et de la banque d'images MNIST.",
+      "C. Vladimir Vapnik — avec ses collaborateurs aux AT&T Bell Labs dans les années 1990.",
+      "D. Andrew Ng — fondateur de Google Brain et spécialiste de l'apprentissage par renforcement."
     ],
     "correct": "C"
   },
@@ -40,22 +40,22 @@
     "theme": "Définitions SVM",
     "question": "Le SVM est particulièrement adapté pour :",
     "options": [
-      "A. Les espaces de grande dimension",
-      "B. Les très grands jeux de données (millions d'exemples)",
-      "C. Les données non linéairement séparables avec un noyau approprié",
-      "D. Les problèmes où les données sont peu nombreuses"
+      "A. Les espaces de grande dimension, les données non linéaires (avec noyau) et les petits jeux de données.",
+      "B. Les très grands jeux de données (millions d'exemples) où la parallélisation est naturelle.",
+      "C. Les problèmes de clustering non supervisé où les étiquettes sont inconnues.",
+      "D. La régression quantile où l'on souhaite prédire des intervalles de confiance."
     ],
-    "correct": ["A", "C", "D"]
+    "correct": ["A", "C"]
   },
   {
     "id": 5,
     "theme": "Définitions SVM",
     "question": "Le SVM appartient à quelle famille d'algorithmes ?",
     "options": [
-      "A. Arbres de décision",
-      "B. Réseaux de neurones",
-      "C. Méthodes à noyaux",
-      "D. Algorithmes génétiques"
+      "A. Arbres de décision — car il partitionne récursivement l'espace des features.",
+      "B. Réseaux de neurones — car il utilise des fonctions d'activation non linéaires.",
+      "C. Méthodes à noyaux — il projette implicitement les données via une fonction de similarité.",
+      "D. Algorithmes évolutionnaires — il optimise une fonction objectif par mutation-sélection."
     ],
     "correct": "C"
   },
@@ -64,22 +64,22 @@
     "theme": "Définitions SVM",
     "question": "Lequel de ces problèmes est un cas d'usage typique du SVM ?",
     "options": [
-      "A. Classification de textes (spam / non spam)",
-      "B. Reconnaissance d'images",
-      "C. Détection d'anomalies",
-      "D. Génération de texte"
+      "A. Classification de textes, reconnaissance d'images et détection d'anomalies.",
+      "B. Génération de texte et traduction automatique neuronale (seq2seq).",
+      "C. Réduction dimensionnelle et visualisation de données en 2D via t-SNE.",
+      "D. Imputation de données manquantes par k-plus proches voisins (k-NN)."
     ],
-    "correct": ["A", "B", "C"]
+    "correct": ["A"]
   },
   {
     "id": 7,
     "theme": "Définitions SVM",
     "question": "La classification SVM est à l'origine conçue pour des problèmes :",
     "options": [
-      "A. Multiclasses",
-      "B. Binaires",
-      "C. Non supervisés",
-      "D. De régression uniquement"
+      "A. Multiclasses — avec décomposition one-vs-one ou one-vs-rest dans l'implémentation.",
+      "B. Binaires — séparer deux classes par un hyperplan à marge maximale.",
+      "C. Non supervisés — où la marge est définie par la densité locale des points.",
+      "D. De régression uniquement — SVR est une extension ultérieure de l'algorithme."
     ],
     "correct": "B"
   },
@@ -88,46 +88,46 @@
     "theme": "Fonctionnement SVM",
     "question": "Quel est l'objectif principal du SVM lors de l'entraînement ?",
     "options": [
-      "A. Minimiser le taux d'erreur uniquement",
-      "B. Trouver l'hyperplan qui maximise la marge entre les classes",
-      "C. Trouver le centre de chaque classe",
-      "D. Minimiser le nombre de vecteurs de support"
+      "A. Minimiser l'erreur quadratique moyenne (MSE) entre prédictions et valeurs réelles.",
+      "B. Trouver l'hyperplan qui minimise la somme des distances à tous les points d'entraînement.",
+      "C. Maximiser la marge entre les classes, en minimisant les violations de marge via la variable de松弛.",
+      "D. Trouver l'hyperplan qui maximise la précision (accuracy) sur l'ensemble d'entraînement."
     ],
-    "correct": "B"
+    "correct": "C"
   },
   {
     "id": 9,
     "theme": "Fonctionnement SVM",
     "question": "Qu'est-ce qu'un hyperplan en SVM ?",
     "options": [
-      "A. Une courbe qui sépare les données",
-      "B. Une frontière de décision linéaire dans l'espace des features",
-      "C. Un ensemble de points mal classifiés",
-      "D. Un paramètre du modèle"
+      "A. Un espace de dimension n-1 qui sépare linéairement les deux classes dans l'espace des features.",
+      "B. Un polyèdre convexe contenant tous les vecteurs de support de la classe positive.",
+      "C. Une fonction de décision non linéaire définie par un noyau gaussien de largeur sigma.",
+      "D. Une courbe de niveau de la fonction de coût, où le gradient s'annule localement."
     ],
-    "correct": "B"
+    "correct": "A"
   },
   {
     "id": 10,
     "theme": "Fonctionnement SVM",
     "question": "Que sont les vecteurs de support ?",
     "options": [
-      "A. Tous les points du dataset",
-      "B. Les points les plus éloignés de l'hyperplan",
-      "C. Les points les plus proches de l'hyperplan, sur les marges",
-      "D. Les points mal classifiés"
+      "A. L'ensemble des points d'entraînement correctement classifiés après convergence.",
+      "B. Les points les plus proches de l'hyperplan, qui définissent la largeur de la marge.",
+      "C. Les outliers éliminés automatiquement par l'algorithme lors du pré-traitement.",
+      "D. Les coefficients de la combinaison linéaire des variables dans le noyau linéaire."
     ],
-    "correct": "C"
+    "correct": "B"
   },
   {
     "id": 11,
     "theme": "Fonctionnement SVM",
     "question": "Que se passe-t-il si on déplace un point qui n'est pas un vecteur de support ?",
     "options": [
-      "A. L'hyperplan change",
-      "B. La marge change",
-      "C. L'hyperplan ne change pas",
-      "D. Le modèle doit être entièrement ré-entraîné"
+      "A. L'hyperplan est modifié marginalement, car tous les points influencent la solution.",
+      "B. La marge se rétrécit proportionnellement à la distance parcourue par le point.",
+      "C. L'hyperplan ne change pas du tout, seuls les vecteurs de support influencent la solution.",
+      "D. Le modèle doit être ré-entraîné car la matrice de Gram change complètement."
     ],
     "correct": "C"
   },
@@ -136,10 +136,10 @@
     "theme": "Fonctionnement SVM",
     "question": "La marge dans un SVM est définie comme :",
     "options": [
-      "A. La distance entre les deux classes les plus éloignées",
-      "B. La distance entre l'hyperplan et les vecteurs de support les plus proches",
-      "C. Le nombre de points mal classifiés",
-      "D. La distance entre le centre des deux classes"
+      "A. La distance entre les barycentres des deux classes dans l'espace original.",
+      "B. La distance entre l'hyperplan et les vecteurs de support les plus proches (2/||w||).",
+      "C. Le nombre de points d'entraînement correctement classifiés divisé par le total.",
+      "D. L'écart-type des prédictions sur un ensemble de validation croisée."
     ],
     "correct": "B"
   },
@@ -148,22 +148,22 @@
     "theme": "Fonctionnement SVM",
     "question": "Pourquoi maximiser la marge est-il important ?",
     "options": [
-      "A. Cela améliore la généralisation du modèle",
-      "B. Cela réduit le risque de surapprentissage (overfitting)",
-      "C. Cela accélère l'entraînement",
-      "D. Cela rend le modèle plus robuste aux nouveaux exemples"
+      "A. Cela accélère la convergence de l'algorithme d'optimisation (SMO).",
+      "B. Cela minimise le rayon de la boule de VC-dimension, améliorant la généralisation.",
+      "C. Cela garantit la convexité du problème primal, assurant un minimum global.",
+      "D. Cela réduit le nombre de vecteurs de support, accélérant l'inférence."
     ],
-    "correct": ["A", "B", "D"]
+    "correct": ["B"]
   },
   {
     "id": 14,
     "theme": "Fonctionnement SVM",
     "question": "Dans l'espace de dimension n, un hyperplan séparateur est de dimension :",
     "options": [
-      "A. n",
-      "B. n + 1",
-      "C. n - 1",
-      "D. 1"
+      "A. n — car il doit traverser toutes les dimensions de l'espace des features.",
+      "B. n + 1 — car le biais ajoute un degré de liberté supplémentaire.",
+      "C. n - 1 — c'est un sous-espace affine de codimension 1, comme une droite en 2D.",
+      "D. 1 — quelle que soit n, l'hyperplan reste une droite dans l'espace dual."
     ],
     "correct": "C"
   },
@@ -172,22 +172,22 @@
     "theme": "Hyperparamètres SVM",
     "question": "Quel hyperparamètre contrôle le compromis entre la marge et les erreurs de classification dans un SVM ?",
     "options": [
-      "A. gamma",
-      "B. kernel",
-      "C. C (régularisation)",
-      "D. degree"
+      "A. Le paramètre C — pénalité des violations de marge (soft margin).",
+      "B. Le paramètre gamma — rayon d'influence du noyau RBF.",
+      "C. Le paramètre degree — degré du noyau polynomial.",
+      "D. Le paramètre coef0 — terme constant dans les noyaux polynomial et sigmoïde."
     ],
-    "correct": "C"
+    "correct": "A"
   },
   {
     "id": 16,
     "theme": "Hyperparamètres SVM",
     "question": "Le paramètre gamma dans le noyau RBF contrôle :",
     "options": [
-      "A. La pénalité des erreurs de classification",
-      "B. Le degré du polynôme",
-      "C. L'influence de chaque point d'entraînement sur la frontière de décision",
-      "D. Le nombre de vecteurs de support"
+      "A. L'amplitude de la pénalité pour les erreurs de classification (équivalent à 1/C).",
+      "B. Le degré du polynôme dans l'espace de redescription du noyau.",
+      "C. L'influence de chaque point d'entraînement : gamma élevé = influence locale forte.",
+      "D. Le nombre maximal de vecteurs de support autorisés avant élagage."
     ],
     "correct": "C"
   },
@@ -196,22 +196,22 @@
     "theme": "Hyperparamètres SVM",
     "question": "Un gamma très élevé dans un SVM RBF provoque :",
     "options": [
-      "A. Une frontière de décision très irrégulière",
-      "B. Un overfitting",
-      "C. Chaque point d'entraînement a une influence très locale",
-      "D. Un underfitting"
+      "A. Un underfitting car la frontière devient trop lisse et ignore les variations locales.",
+      "B. Une frontière très irrégulière qui épouse chaque point d'entraînement (overfitting).",
+      "C. Une convergence plus rapide car le noyau devient linéaire quand gamma → ∞.",
+      "D. Un calcul plus efficace car la matrice de Gram devient diagonale dominante."
     ],
-    "correct": ["A", "B", "C"]
+    "correct": ["B"]
   },
   {
     "id": 18,
     "theme": "Noyaux SVM",
     "question": "Quel noyau (kernel) est utilisé par défaut dans sklearn pour le SVM ?",
     "options": [
-      "A. Linéaire",
-      "B. Polynomial",
-      "C. RBF (Radial Basis Function)",
-      "D. Sigmoïde"
+      "A. 'linear' — car c'est le plus rapide et le mieux interprétable par défaut.",
+      "B. 'poly' (polynomial de degré 3) — bon compromis entre complexité et expressivité.",
+      "C. 'rbf' (Radial Basis Function) — noyau gaussien, efficace pour la plupart des problèmes.",
+      "D. 'sigmoid' — car il s'apparente à un réseau de neurones à une couche cachée."
     ],
     "correct": "C"
   },
@@ -220,58 +220,58 @@
     "theme": "Noyaux SVM",
     "question": "Le noyau (kernel) dans un SVM sert à :",
     "options": [
-      "A. Projeter les données dans un espace de dimension supérieure",
-      "B. Rendre séparables des données non linéaires",
-      "C. Calculer la similarité entre deux points sans calculer explicitement la transformation",
-      "D. Remplacer les vecteurs de support"
+      "A. Projeter les données en haute dimension sans calculer explicitement la transformation (kernel trick).",
+      "B. Remplacer les vecteurs de support par une approximation de faible rang (Nyström).",
+      "C. Accélérer la descente de gradient par des calculs de similarité vectorisée.",
+      "D. Réduire la dimension des données par projection aléatoire de Johnson-Lindenstrauss."
     ],
-    "correct": ["A", "B", "C"]
+    "correct": ["A"]
   },
   {
     "id": 20,
     "theme": "Noyaux SVM",
     "question": "Lequel de ces noyaux est adapté aux données linéairement séparables ?",
     "options": [
-      "A. RBF",
-      "B. Polynomial",
-      "C. Linéaire",
-      "D. Sigmoïde"
+      "A. Le noyau linéaire — il calcule le produit scalaire standard sans projection.",
+      "B. Le noyau RBF — car il peut aussi séparer des données linéaires avec gamma petit.",
+      "C. Le noyau polynomial de degré 2 — qui ajoute des interactions quadratiques.",
+      "D. Le noyau laplacien — robuste aux outliers grâce à sa décroissance exponentielle."
     ],
-    "correct": "C"
+    "correct": "A"
   },
   {
     "id": 21,
     "theme": "Métriques d'évaluation",
     "question": "Quelle métrique mesure le pourcentage de prédictions correctes sur l'ensemble des prédictions ?",
     "options": [
-      "A. Précision (Precision)",
-      "B. Rappel (Recall)",
-      "C. Exactitude (Accuracy)",
-      "D. F1-Score"
+      "A. L'Accuracy — (TP + TN) / (TP + TN + FP + FN), sensible au déséquilibre des classes.",
+      "B. La Précision — TP / (TP + FP), importante quand les faux positifs sont coûteux.",
+      "C. Le Rappel — TP / (TP + FN), privilégié en détection de maladies rares.",
+      "D. Le F1-Score — moyenne harmonique de la précision et du rappel."
     ],
-    "correct": "C"
+    "correct": "A"
   },
   {
     "id": 22,
     "theme": "Métriques d'évaluation",
     "question": "La matrice de confusion permet de visualiser :",
     "options": [
-      "A. Les vrais positifs (TP)",
-      "B. Les faux positifs (FP)",
-      "C. Les faux négatifs (FN)",
-      "D. Les vrais négatifs (TN)"
+      "A. Uniquement les vrais positifs (TP) et les vrais négatifs (TN).",
+      "B. La distribution des probabilités prédites par classe (calibration).",
+      "C. Les quatre combinaisons : TP, FP, FN, TN — croisant réel et prédit.",
+      "D. La courbe ROC (taux de vrais positifs vs taux de faux positifs)."
     ],
-    "correct": ["A", "B", "C", "D"]
+    "correct": "C"
   },
   {
     "id": 23,
     "theme": "Métriques d'évaluation",
     "question": "Dans un problème de détection de maladie, quelle métrique est la plus critique à maximiser ?",
     "options": [
-      "A. Accuracy",
-      "B. Précision",
-      "C. Rappel (Recall)",
-      "D. Temps d'entraînement"
+      "A. L'Accuracy — car elle donne une vue équilibrée des performances.",
+      "B. La Précision — pour éviter d'alarmer des patients sains.",
+      "C. Le Rappel (Recall/sensibilité) — pour ne pas manquer des malades (faux négatifs).",
+      "D. La Spécificité — pour éviter les faux positifs en médecine préventive."
     ],
     "correct": "C"
   },
@@ -280,34 +280,34 @@
     "theme": "Métriques d'évaluation",
     "question": "Le F1-Score est défini comme :",
     "options": [
-      "A. La moyenne simple de la précision et du rappel",
-      "B. La moyenne harmonique de la précision et du rappel",
-      "C. Le produit de la précision et du rappel",
-      "D. La différence entre précision et rappel"
+      "A. La moyenne arithmétique de la précision et du rappel (P + R)/2.",
+      "B. La moyenne géométrique de la précision et du rappel √(P × R).",
+      "C. La moyenne harmonique de la précision et du rappel 2 × (P × R)/(P + R).",
+      "D. Le produit normalisé de la précision et du rappel divisé par l'accuracy."
     ],
-    "correct": "B"
+    "correct": "C"
   },
   {
     "id": 25,
     "theme": "Métriques d'évaluation",
     "question": "Quand utiliser le F1-Score plutôt que l'Accuracy ?",
     "options": [
-      "A. Quand les classes sont déséquilibrées",
-      "B. Quand les faux positifs et faux négatifs ont un coût important",
-      "C. Quand on a exactement autant d'exemples dans chaque classe",
-      "D. Quand les données sont parfaitement séparables"
+      "A. Quand les classes sont équilibrées et les coûts d'erreur symétriques.",
+      "B. Quand le dataset contient plus de 10 000 exemples et 100 features.",
+      "C. Quand les classes sont déséquilibrées ou les FN et FP ont des coûts différents.",
+      "D. Quand le modèle est un réseau de neurones profond (deep learning)."
     ],
-    "correct": ["A", "B"]
+    "correct": ["C"]
   },
   {
     "id": 26,
     "theme": "Métriques d'évaluation",
     "question": "Quel outil Python permet d'afficher le rapport complet de classification (precision, rappel, F1) ?",
     "options": [
-      "A. confusion_matrix()",
-      "B. classification_report()",
-      "C. accuracy_score()",
-      "D. roc_auc_score()"
+      "A. sklearn.metrics.confusion_matrix() — uniquement la matrice 2×2.",
+      "B. sklearn.metrics.classification_report() — affiche précision, rappel, F1 et support.",
+      "C. sklearn.metrics.roc_auc_score() — pour l'AUC sous la courbe ROC.",
+      "D. sklearn.metrics.mean_squared_error() — pour les problèmes de régression."
     ],
     "correct": "B"
   },
@@ -316,70 +316,70 @@
     "theme": "Avantages et limites du SVM",
     "question": "Quels sont les avantages du SVM ?",
     "options": [
-      "A. Efficace en grande dimension",
-      "B. Robuste aux données aberrantes grâce à la marge",
-      "C. Très rapide sur les très grands datasets",
-      "D. Fonctionne bien avec peu de données d'entraînement"
+      "A. Rapide sur les très grands datasets (millions d'échantillons) grâce aux noyaux approximatifs.",
+      "B. Efficace en grande dimension, robuste aux outliers (via la marge), bon avec peu de données.",
+      "C. Parfaitement interprétable car les coefficients des features sont directement lisibles.",
+      "D. Insensible au choix des hyperparamètres (C, gamma) qui peuvent être laissés par défaut."
     ],
-    "correct": ["A", "B", "D"]
+    "correct": ["B"]
   },
   {
     "id": 28,
     "theme": "Avantages et limites du SVM",
     "question": "Quelles sont les limites du SVM ?",
     "options": [
-      "A. Sensible au choix du noyau et des hyperparamètres",
-      "B. Difficile à interpréter (boîte noire)",
-      "C. Coûteux en temps de calcul sur les très grands datasets",
-      "D. Ne peut pas traiter les données non linéaires"
+      "A. Inefficace en grande dimension car la matrice de Gram devient singulière.",
+      "B. Très sensible aux outliers car tous les points influencent la marge également.",
+      "C. Coûteux sur les grands datasets (O(n²) à O(n³)), peu interprétable avec noyaux non linéaires.",
+      "D. Ne peut traiter que des problèmes binaires, aucune extension multiclasse n'existe."
     ],
-    "correct": ["A", "B", "C"]
+    "correct": ["C"]
   },
   {
     "id": 29,
     "theme": "Avantages et limites du SVM",
     "question": "Le SVM est peu adapté quand :",
     "options": [
-      "A. Le nombre de features est très grand",
-      "B. Le dataset contient des millions d'exemples",
-      "C. Les classes se chevauchent fortement",
-      "D. Les données sont en 2D"
+      "A. Les données sont en très grande dimension (plus de 10 000 features).",
+      "B. Le dataset contient des millions d'exemples (coût cubique prohibitif).",
+      "C. Les classes sont linéairement séparables (trop simple pour le SVM).",
+      "D. Les features sont toutes normalisées (centrées-réduites)."
     ],
-    "correct": ["B", "C"]
+    "correct": ["B"]
   },
   {
     "id": 30,
     "theme": "Avantages et limites du SVM",
     "question": "Pourquoi dit-on que le SVM est peu interprétable ?",
     "options": [
-      "A. On ne peut pas visualiser l'hyperplan en haute dimension",
-      "B. Le rôle de chaque feature n'est pas directement lisible",
-      "C. Le noyau RBF transforme l'espace de manière non linéaire et opaque",
-      "D. Le modèle ne fournit pas de probabilités directement"
+      "A. Car la fonction de décision utilise des vecteurs de support difficilement visualisables en haute dimension.",
+      "B. Car le noyau RBF projette les données dans un espace de dimension infinie, rendant les coefficients illisibles.",
+      "C. Car l'algorithme d'optimisation (SMO) est stochastique et non déterministe.",
+      "D. Car les prédictions ne sont pas probabilistes (contrairement à la régression logistique)."
     ],
-    "correct": ["A", "B", "C", "D"]
+    "correct": ["A", "B", "D"]
   },
   {
     "id": 31,
     "theme": "Comparaisons",
     "question": "Par rapport à un arbre de décision, le SVM est :",
     "options": [
-      "A. Plus performant en haute dimension",
-      "B. Plus difficile à interpréter",
-      "C. Plus rapide à entraîner sur de grands datasets",
-      "D. Moins sensible aux données aberrantes"
+      "A. Plus rapide à l'entraînement sur de grands datasets (O(n log n) vs O(n²)).",
+      "B. Plus interprétable car les règles de décision sont lisibles par un humain.",
+      "C. Plus performant en haute dimension, mais moins interprétable.",
+      "D. Naturellement multiclasse alors que l'arbre nécessite une stratégie one-vs-one."
     ],
-    "correct": ["A", "B", "D"]
+    "correct": ["C"]
   },
   {
     "id": 32,
     "theme": "Outils Python",
     "question": "Quelle bibliothèque Python est utilisée pour implémenter un SVM ?",
     "options": [
-      "A. TensorFlow",
-      "B. scikit-learn (sklearn)",
-      "C. Pandas",
-      "D. Matplotlib"
+      "A. TensorFlow — pour les réseaux de neurones profonds et le deep learning.",
+      "B. scikit-learn (sklearn) — avec sklearn.svm.SVC pour la classification.",
+      "C. Pandas — pour la manipulation et l'analyse de données tabulaires.",
+      "D. Matplotlib — pour la visualisation et les graphiques 2D/3D."
     ],
     "correct": "B"
   },
@@ -388,34 +388,34 @@
     "theme": "Outils Python",
     "question": "Quelle classe sklearn est utilisée pour la classification SVM ?",
     "options": [
-      "A. SVR",
-      "B. SVC",
-      "C. LinearSVC",
-      "D. NuSVC"
+      "A. sklearn.svm.SVR — utilisée pour les problèmes de régression, pas pour la classification.",
+      "B. sklearn.svm.LinearSVC — version optimisée pour le noyau linéaire uniquement.",
+      "C. sklearn.svm.SVC — classe principale supportant tous les noyaux (linear, poly, rbf, sigmoid).",
+      "D. sklearn.svm.NuSVC — variante utilisant le paramètre ν (nu) à la place de C."
     ],
-    "correct": "B"
+    "correct": "C"
   },
   {
     "id": 34,
     "theme": "Prétraitement des données",
     "question": "Pourquoi est-il important de normaliser les données avant d'entraîner un SVM ?",
     "options": [
-      "A. Le SVM est sensible à l'échelle des features",
-      "B. Des features sur des échelles différentes biaisent le calcul de la marge",
-      "C. La normalisation accélère la convergence",
-      "D. La normalisation supprime les valeurs aberrantes"
+      "A. Le SVM calcule des distances : des features à grandes échelles domineraient la marge.",
+      "B. Le SVM suppose une distribution gaussienne des données autour de l'origine.",
+      "C. La normalisation transforme les données non linéairement séparables en données linéaires.",
+      "D. Les noyaux RBF nécessitent que les données soient bornées entre -1 et 1."
     ],
-    "correct": ["A", "B", "C"]
+    "correct": ["A"]
   },
   {
     "id": 35,
     "theme": "Prétraitement des données",
     "question": "Quel outil sklearn est utilisé pour normaliser les données ?",
     "options": [
-      "A. Normalizer",
-      "B. StandardScaler",
-      "C. MinMaxScaler",
-      "D. B et C sont tous les deux corrects"
+      "A. sklearn.preprocessing.Normalizer — normalise chaque échantillon (ligne) à norme unité.",
+      "B. sklearn.preprocessing.StandardScaler — centre et réduit (moyenne 0, écart-type 1).",
+      "C. sklearn.preprocessing.MinMaxScaler — met à l'échelle dans un intervalle (souvent [0,1]).",
+      "D. B et C sont tous deux corrects selon les besoins (StandardScaler ou MinMaxScaler)."
     ],
     "correct": "D"
   },
@@ -424,8 +424,10 @@
     "theme": "Outils Python",
     "question": "Quelle méthode sklearn permet de diviser le dataset en train/test ?",
     "options": [
-      "A. cross_val_score()",
-      "B. train_test_split()"
+      "A. sklearn.model_selection.cross_val_score() — pour la validation croisée uniquement.",
+      "B. sklearn.model_selection.train_test_split() — division aléatoire avec option de stratification.",
+      "C. sklearn.model_selection.KFold() — génère des indices pour k-plis de validation croisée.",
+      "D. sklearn.model_selection.StratifiedShuffleSplit() — préserve la proportion des classes."
     ],
     "correct": "B"
   },
@@ -434,22 +436,22 @@
     "theme": "Optimisation des hyperparamètres",
     "question": "Quel outil sklearn est utilisé pour optimiser les hyperparamètres C et gamma ?",
     "options": [
-      "A. GridSearchCV",
-      "B. RandomizedSearchCV",
-      "C. cross_val_score",
-      "D. Pipeline"
+      "A. sklearn.model_selection.GridSearchCV — recherche exhaustive sur une grille définie.",
+      "B. sklearn.model_selection.RandomizedSearchCV — recherche aléatoire pour grands espaces.",
+      "C. sklearn.model_selection.BayesianSearchCV — optimisation bayésienne via scikit-optimize.",
+      "D. A, B et C sont tous utilisables selon le compromis temps/précision recherché."
     ],
-    "correct": ["A", "B"]
+    "correct": "D"
   },
   {
     "id": 38,
     "theme": "Workflow",
-    "question": "Dans quel ordre correct doit-on appliquer les étapes suivantes ? (1. Entraîner le modèle, 2. Prétraiter les données, 3. Évaluer le modèle, 4. Charger et explorer le dataset, 5. Interpréter les résultats)",
+    "question": "Dans quel ordre correct doit-on appliquer les étapes suivantes ? (1: Entraîner, 2: Prétraiter, 3: Évaluer, 4: Explorer, 5: Interpréter)",
     "options": [
-      "A. 4 → 1 → 2 → 3 → 5",
-      "B. 4 → 2 → 1 → 3 → 5",
-      "C. 2 → 4 → 1 → 3 → 5",
-      "D. 1 → 4 → 2 → 3 → 5"
+      "A. 4 → 1 → 2 → 3 → 5 (entraîner avant prétraiter : erreur courante de débutant).",
+      "B. 4 → 2 → 1 → 3 → 5 (explorer, prétraiter, entraîner, évaluer, interpréter).",
+      "C. 2 → 4 → 1 → 3 → 5 (prétraiter avant d'explorer : risque de passer à côté des outliers).",
+      "D. 1 → 4 → 2 → 3 → 5 (entraîner avant d'explorer : impossible sans données prétraitées)."
     ],
     "correct": "B"
   },
@@ -458,46 +460,46 @@
     "theme": "Interprétation",
     "question": "Lors de l'interprétation des résultats d'un SVM, quels éléments peut-on analyser ?",
     "options": [
-      "A. Les vecteurs de support",
-      "B. Les coefficients de l'hyperplan (pour noyau linéaire uniquement)",
-      "C. La matrice de confusion",
-      "D. L'importance des features (comme en Random Forest)"
+      "A. Les vecteurs de support (surtout s'ils sont peu nombreux) et la matrice de confusion.",
+      "B. Les coefficients du modèle (uniquement pour le noyau linéaire, comme importance des features).",
+      "C. La courbe ROC et l'AUC pour évaluer le compromis sensibilité/spécificité.",
+      "D. A, B et C sont tous possibles selon le contexte et le type de noyau utilisé."
     ],
-    "correct": ["A", "B", "C"]
+    "correct": "D"
   },
   {
     "id": 40,
     "theme": "Débogage et amélioration",
     "question": "Si ton SVM a une très bonne accuracy sur le train mais mauvaise sur le test, que faire ?",
     "options": [
-      "A. Diminuer C pour augmenter la marge",
-      "B. Diminuer gamma pour réduire la complexité du modèle",
-      "C. Utiliser la cross-validation pour mieux évaluer",
-      "D. Augmenter le dataset d'entraînement"
+      "A. Augmenter C pour réduire la marge et mieux coller aux données d'entraînement.",
+      "B. Augmenter gamma pour rendre la frontière plus complexe et capturer les détails.",
+      "C. Diminuer C (marge plus large) et/ou diminuer gamma (frontière plus lisse) — régularisation.",
+      "D. Ajouter des features polynomiales pour augmenter la capacité du modèle."
     ],
-    "correct": ["A", "B", "C", "D"]
+    "correct": ["C"]
   },
   {
     "id": 41,
     "theme": "Comparaisons",
     "question": "Quelle est la différence entre SVM et régression logistique ?",
     "options": [
-      "A. Le SVM maximise la marge entre les classes, la régression logistique minimise une fonction de coût probabiliste",
-      "B. La régression logistique fournit des probabilités, le SVM non (par défaut)",
-      "C. Le SVM ne peut pas traiter les problèmes binaires",
-      "D. La régression logistique est plus efficace en grande dimension"
+      "A. La régression logistique maximise la vraisemblance, le SVM maximise la marge hinge.",
+      "B. La régression logistique fournit des probabilités via sigmoïde, le SVM non par défaut.",
+      "C. Le SVM est plus robuste aux outliers grâce à sa marge, la régression logistique moins.",
+      "D. A, B et C sont toutes des différences importantes entre les deux algorithmes."
     ],
-    "correct": ["A", "B"]
+    "correct": "D"
   },
   {
     "id": 42,
     "theme": "Fonctionnement SVM",
     "question": "Que se passe-t-il si les données ne sont pas linéairement séparables et qu'on utilise un SVM linéaire sans soft margin ?",
     "options": [
-      "A. Le modèle trouve quand même un hyperplan optimal",
-      "B. Le modèle ne converge pas et ne trouve pas de solution",
-      "C. Le modèle ignore les points mal classifiés automatiquement",
-      "D. La marge devient négative"
+      "A. L'algorithme trouve l'hyperplan qui minimise le nombre d'erreurs (intractable).",
+      "B. Le problème primal n'a pas de solution faisable — les contraintes de marge sont violées.",
+      "C. Le dual diverge car la matrice de Gram n'est pas définie positive.",
+      "D. Les vecteurs de support sont tous les points d'entraînement (overfitting immédiat)."
     ],
     "correct": "B"
   },
@@ -506,22 +508,22 @@
     "theme": "Fonctionnement SVM",
     "question": "Dans un SVM, augmenter le nombre de vecteurs de support indique généralement :",
     "options": [
-      "A. Une marge plus large",
-      "B. Une marge plus étroite",
-      "C. Un modèle plus complexe",
-      "D. Un risque d'overfitting plus élevé"
+      "A. Une meilleure généralisation car plus de points définissent la frontière.",
+      "B. Un modèle plus simple avec une marge plus large (régularisation forte).",
+      "C. Une marge plus étroite et un risque d'overfitting plus élevé.",
+      "D. Un dataset parfaitement linéairement séparable (cas du noyau linéaire)."
     ],
-    "correct": ["B", "C", "D"]
+    "correct": ["C"]
   },
   {
     "id": 44,
     "theme": "Noyaux SVM",
     "question": "Quel noyau est le plus adapté pour des données présentant une frontière circulaire entre les classes ?",
     "options": [
-      "A. Linéaire",
-      "B. RBF (Radial Basis Function)",
-      "C. Sigmoïde",
-      "D. Polynomial de degré 1"
+      "A. Linéaire — aucun espace de redescription, restera une droite.",
+      "B. RBF (Radial Basis Function) — mesure la distance radiale, adapté aux cercles.",
+      "C. Polynomial de degré 2 — peut modéliser des ellipses mais pas des cercles parfaits.",
+      "D. Sigmoid — similaire à un réseau de neurones, efficace pour les frontières complexes."
     ],
     "correct": "B"
   },
@@ -530,22 +532,22 @@
     "theme": "Hyperparamètres SVM",
     "question": "Que signifie un gamma très faible dans un noyau RBF ?",
     "options": [
-      "A. Chaque point a une influence très large sur la frontière de décision",
-      "B. La frontière de décision est lisse et régulière",
-      "C. Le modèle risque de faire de l'underfitting",
-      "D. Le modèle est très sensible aux données locales"
+      "A. Chaque point influence une très petite région : frontière très irrégulière.",
+      "B. L'influence de chaque point s'étend loin : frontière lisse, risque d'underfitting.",
+      "C. Le noyau se comporte comme un noyau linéaire (γ→0).",
+      "D. La matrice de Gram devient diagonale, chaque point est indépendant."
     ],
-    "correct": ["A", "B", "C"]
+    "correct": ["B"]
   },
   {
     "id": 46,
     "theme": "Métriques d'évaluation",
     "question": "Dans une matrice de confusion, les faux positifs (FP) représentent :",
     "options": [
-      "A. Des exemples positifs correctement classifiés",
-      "B. Des exemples négatifs incorrectement classifiés comme positifs",
-      "C. Des exemples positifs incorrectement classifiés comme négatifs",
-      "D. Des exemples négatifs correctement classifiés"
+      "A. Des exemples positifs correctement classifiés (TP) — erreur de terminologie courante.",
+      "B. Des exemples négatifs classifiés comme positifs — erreur de type I.",
+      "C. Des exemples positifs classifiés comme négatifs — erreur de type II (faux négatifs).",
+      "D. Des exemples correctement rejetés (TN) — diagonale de la matrice."
     ],
     "correct": "B"
   },
@@ -554,47 +556,47 @@
     "theme": "Métriques d'évaluation",
     "question": "Quelle affirmation est vraie concernant la précision (Precision) ?",
     "options": [
-      "A. Elle mesure parmi les prédictions positives, combien sont vraiment positives",
-      "B. Elle est importante quand le coût des faux positifs est élevé",
-      "C. Elle est calculée comme TP / (TP + FN)",
-      "D. Une précision élevée garantit un bon rappel"
+      "A. Précision = TP / (TP + FN) — confusion avec le rappel (formule inverse).",
+      "B. Précision = TP / (TP + FP) — elle mesure la pureté des prédictions positives.",
+      "C. Précision = (TP + TN) / (TP + TN + FP + FN) — c'est la définition de l'accuracy.",
+      "D. Une précision élevée garantit nécessairement un bon rappel (faux, trade-off)."
     ],
-    "correct": ["A", "B"]
+    "correct": "B"
   },
   {
     "id": 48,
     "theme": "Avantages et limites du SVM",
     "question": "Pourquoi le SVM est-il considéré comme robuste aux données aberrantes (outliers) ?",
     "options": [
-      "A. Seuls les vecteurs de support influencent l'hyperplan",
-      "B. Les points éloignés de la marge n'ont aucun impact sur le modèle",
-      "C. Le paramètre C permet de contrôler l'impact des outliers",
-      "D. Le SVM supprime automatiquement les outliers avant l'entraînement"
+      "A. Seuls les vecteurs de support influencent la frontière — les outliers hors marge sont ignorés.",
+      "B. Il applique un lissage gaussien qui écrête les valeurs extrêmes automatiquement.",
+      "C. Le paramètre C permet de contrôler la tolérance aux violations de marge.",
+      "D. A et C sont corrects : les outliers sont naturellement ignorés sauf s'ils deviennent vecteurs de support."
     ],
-    "correct": ["A", "B", "C"]
+    "correct": "D"
   },
   {
     "id": 49,
     "theme": "Prétraitement des données",
     "question": "Lors du prétraitement des données pour un SVM, quelles étapes sont importantes ?",
     "options": [
-      "A. Normaliser les features avec StandardScaler ou MinMaxScaler",
-      "B. Encoder les variables catégorielles (LabelEncoder, OneHotEncoder)",
-      "C. Toujours appliquer une ACP (PCA) avant le SVM",
-      "D. Gérer les valeurs manquantes (imputation ou suppression)"
+      "A. Normalisation (StandardScaler), encodage des variables catégorielles, gestion des valeurs manquantes.",
+      "B. Réduction dimensionnelle par PCA (obligatoire avant tout SVM non linéaire).",
+      "C. Ajout de bruit gaussien pour stabiliser la matrice de Gram.",
+      "D. Suppression de tous les outliers avant l'entraînement (risque de perdre des patterns)."
     ],
-    "correct": ["A", "B", "D"]
+    "correct": ["A"]
   },
   {
     "id": 50,
     "theme": "Outils Python",
     "question": "Après avoir entraîné un SVM avec sklearn, comment accéder aux vecteurs de support ?",
     "options": [
-      "A. model.support_vectors_ — donne les coordonnées des vecteurs de support",
-      "B. model.support_ — donne les indices des vecteurs de support dans le dataset",
-      "C. model.n_support_ — donne le nombre de vecteurs de support par classe",
-      "D. model.coef_ — fonctionne avec tous les types de noyaux"
+      "A. model.support_vectors_ — coordonnées des vecteurs de support dans l'espace d'origine.",
+      "B. model.support_ — indices des vecteurs de support dans le tableau X_train.",
+      "C. model.n_support_ — nombre de vecteurs de support par classe (tableau de taille n_classes).",
+      "D. A, B et C sont tous des attributs disponibles de l'objet SVC après fit."
     ],
-    "correct": ["A", "B", "C"]
+    "correct": "D"
   }
 ]
