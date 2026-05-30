@@ -1,111 +1,121 @@
 [
   {
     "id": 1,
-    "theme": "Concepts généraux ACP",
+    "theme": "Concepts généraux PCA",
     "question": "Que signifie l'acronyme PCA (ou ACP en français) ?",
     "options": [
-      "A. Analyse de Corrélation Principale",
-      "B. Analyse en Composantes Principales",
-      "C. Algorithme de Calcul Principal"
+      "A. Principal Component Analysis — Analyse en Composantes Principales, méthode de réduction dimensionnelle.",
+      "B. Probabilistic Component Analysis — variante bayésienne de l'analyse factorielle.",
+      "C. Polynomial Component Analysis — extension non linéaire par noyaux polynomiaux.",
+      "D. Partial Correlation Analysis — analyse des corrélations partielles entre variables."
     ],
-    "correct": "B"
+    "correct": "A"
   },
   {
     "id": 2,
-    "theme": "Concepts généraux ACP",
+    "theme": "Concepts généraux PCA",
     "question": "À quel type d'apprentissage appartient l'ACP ?",
     "options": [
-      "A. Apprentissage supervisé",
-      "B. Apprentissage non supervisé",
-      "C. Apprentissage par renforcement"
+      "A. Apprentissage supervisé — car elle maximise la variance entre classes étiquetées (comme la LDA).",
+      "B. Apprentissage non supervisé — aucune variable cible n'est utilisée pour guider la projection.",
+      "C. Apprentissage semi-supervisé — elle peut intégrer des contraintes de paires must-link/cannot-link.",
+      "D. Apprentissage par renforcement — elle optimise une récompense via projection des états."
     ],
     "correct": "B"
   },
   {
     "id": 3,
-    "theme": "Concepts généraux ACP",
+    "theme": "Concepts généraux PCA",
     "question": "Quel phénomène l'ACP tente-t-elle de combattre ?",
     "options": [
-      "A. La linéarité des données",
-      "B. La malédiction de la dimension",
-      "C. La corrélation nulle"
+      "A. Le sous-apprentissage (underfitting) — en ajoutant des features polynomiales.",
+      "B. La malédiction de la dimension — la dilution des distances en grande dimension.",
+      "C. La multicolinéarité parfaite — en supprimant les variables redondantes une à une.",
+      "D. Le bruit de mesure — en lissant les données par moyenne mobile."
     ],
     "correct": "B"
   },
   {
     "id": 4,
-    "theme": "Concepts généraux ACP",
+    "theme": "Concepts généraux PCA",
     "question": "Quelle est la définition de la réduction dimensionnelle ?",
     "options": [
-      "A. Transformer des données d'un espace de grande dimension vers un espace plus petit en gardant l'essentiel",
-      "B. Supprimer aléatoirement des colonnes d'un tableau",
-      "C. Augmenter le nombre de variables pour mieux voir les détails"
+      "A. Projeter des données d'un espace de grande dimension vers un espace plus petit tout en préservant un maximum d'information.",
+      "B. Sélectionner aléatoirement un sous-ensemble de colonnes en éliminant les variables corrélées.",
+      "C. Compresser les données par quantification vectorielle (k-means sur les lignes).",
+      "D. Appliquer une transformation logarithmique pour réduire l'étendue des valeurs."
     ],
     "correct": "A"
   },
   {
     "id": 5,
-    "theme": "Concepts généraux ACP",
+    "theme": "Concepts généraux PCA",
     "question": "L'ACP est-elle une méthode de :",
     "options": [
-      "A. Sélection de variables (choix d'un sous-ensemble)",
-      "B. Extraction de caractéristiques (création de nouvelles variables)",
-      "C. Classification automatique"
+      "A. Sélection de variables — elle choisit un sous-ensemble des colonnes originales.",
+      "B. Extraction de caractéristiques — elle crée de nouvelles variables (combinaisons linéaires).",
+      "C. Clustering — elle regroupe les individus en classes homogènes (comme k-means).",
+      "D. Régularisation — elle ajoute une pénalité L2 sur les coefficients (comme Ridge)."
     ],
     "correct": "B"
   },
   {
     "id": 6,
-    "theme": "Concepts généraux ACP",
+    "theme": "Concepts généraux PCA",
     "question": "Dans quel but utilise-t-on l'ACP en analyse exploratoire ?",
     "options": [
-      "A. Pour prédire une valeur cible",
-      "B. Pour visualiser des données complexes en 2D ou 3D",
-      "C. Pour supprimer les individus aberrants automatiquement"
+      "A. Pour prédire une variable cible continue avec une régression linéaire multiple.",
+      "B. Pour visualiser des données multidimensionnelles en 2D ou 3D sur un nuage de points.",
+      "C. Pour détecter automatiquement les outliers par la méthode des boîtes à moustaches.",
+      "D. Pour imputer les valeurs manquantes par la moyenne des k plus proches voisins."
     ],
     "correct": "B"
   },
   {
     "id": 7,
-    "theme": "Concepts généraux ACP",
+    "theme": "Concepts généraux PCA",
     "question": "Que permet de réduire l'ACP dans un jeu de données ?",
     "options": [
-      "A. Le nombre d'individus (lignes)",
-      "B. Le nombre de variables (colonnes) et la redondance",
-      "C. La précision des mesures"
+      "A. Le nombre d'individus (lignes) — par échantillonnage stratifié selon les composantes.",
+      "B. Le nombre de variables (colonnes) et la redondance entre elles (multicolinéarité).",
+      "C. La taille mémoire des fichiers — par compression sans perte (type ZIP).",
+      "D. Le bruit de mesure — en arrondissant les valeurs à l'entier le plus proche."
     ],
     "correct": "B"
   },
   {
     "id": 8,
-    "theme": "Concepts généraux ACP",
+    "theme": "Concepts généraux PCA",
     "question": "Comment l'ACP traite-t-elle les variables initiales ?",
     "options": [
-      "A. Elle les conserve telles quelles",
-      "B. Elle les combine linéairement pour créer de nouveaux axes",
-      "C. Elle les classe par ordre alphabétique"
+      "A. Elle les conserve telles quelles, mais les réordonne par variance décroissante.",
+      "B. Elle les combine linéairement pour créer des axes orthogonaux non corrélés.",
+      "C. Elle les transforme par une fonction non linéaire (log, exp, puissance).",
+      "D. Elle les normalise une à une sans les combiner entre elles."
     ],
     "correct": "B"
   },
   {
     "id": 9,
-    "theme": "Concepts généraux ACP",
+    "theme": "Concepts généraux PCA",
     "question": "L'ACP est une méthode de projection :",
     "options": [
-      "A. Orthogonale",
-      "B. Circulaire",
-      "C. Aléatoire"
+      "A. Orthogonale — les axes sont perpendiculaires, garantissant l'absence de corrélation.",
+      "B. Oblique — les axes peuvent être corrélés, comme en analyse factorielle promax.",
+      "C. Stochastique — la projection dépend d'un tirage aléatoire de sous-ensembles.",
+      "D. Conforme — elle préserve les angles entre les points (transformation isométrique)."
     ],
     "correct": "A"
   },
   {
     "id": 10,
-    "theme": "Concepts généraux ACP",
+    "theme": "Concepts généraux PCA",
     "question": "Quel est l'un des risques d'avoir trop de dimensions ?",
     "options": [
-      "A. Le surapprentissage (overfitting)",
-      "B. Une trop grande clarté visuelle",
-      "C. Une réduction du temps de calcul"
+      "A. Le surapprentissage (overfitting) — le modèle capture le bruit plutôt que le signal.",
+      "B. Une trop grande clarté visuelle — rendant les patterns trop évidents.",
+      "C. Une réduction du temps de calcul — les algorithmes sont plus rapides en haute dimension.",
+      "D. Une augmentation de la variance expliquée — toujours bénéfique pour la prédiction."
     ],
     "correct": "A"
   },
@@ -114,9 +124,10 @@
     "theme": "Principes fondamentaux",
     "question": "Quelle est l'hypothèse fondamentale de l'ACP concernant l'information ?",
     "options": [
-      "A. Information = Moyenne",
-      "B. Information = Variance",
-      "C. Information = Corrélation nulle"
+      "A. Information = Moyenne — la direction de la moyenne contient le plus de signal.",
+      "B. Information = Variance — les directions de forte variance sont les plus informatives.",
+      "C. Information = Kurtosis — les directions non gaussiennes contiennent le signal.",
+      "D. Information = Entropie — maximiser l'entropie mutuelle entre composantes."
     ],
     "correct": "B"
   },
@@ -125,9 +136,10 @@
     "theme": "Principes fondamentaux",
     "question": "Que signifie une forte variance sur un axe principal ?",
     "options": [
-      "A. Que les données sont bruitées et inutiles",
-      "B. Que les données sont distinguables et informatives",
-      "C. Que toutes les valeurs sont identiques"
+      "A. Que les données sont bruitées et inutiles — la variance est à minimiser.",
+      "B. Que les points sont dispersés et donc bien distinguables sur cet axe.",
+      "C. Que toutes les valeurs sont identiques — variance nulle, cas dégénéré.",
+      "D. Que la distribution est parfaitement symétrique (moyenne = médiane = mode)."
     ],
     "correct": "B"
   },
@@ -136,9 +148,10 @@
     "theme": "Principes fondamentaux",
     "question": "Que mesure la covariance entre deux variables ?",
     "options": [
-      "A. Leur moyenne cumulée",
-      "B. La manière dont elles varient conjointement",
-      "C. Leur écart par rapport à zéro"
+      "A. Leur moyenne géométrique après standardisation par les écarts-types.",
+      "B. Leur tendance à varier conjointement : signe positif = même sens de variation.",
+      "C. Leur coefficient de corrélation de Pearson (version normalisée entre -1 et 1).",
+      "D. La pente de la droite de régression linéaire de X sur Y sans intercept."
     ],
     "correct": "B"
   },
@@ -147,20 +160,22 @@
     "theme": "Principes fondamentaux",
     "question": "Si la covariance entre deux variables est proche de zéro, cela signifie :",
     "options": [
-      "A. Elles sont fortement liées",
-      "B. Elles sont indépendantes d'un point de vue linéaire",
-      "C. Elles ont la même échelle"
+      "A. Elles sont indépendantes d'un point de vue linéaire (mais non linéaire possible).",
+      "B. Elles sont parfaitement corrélées positivement (r = 1 après normalisation).",
+      "C. L'une est l'opposé exact de l'autre (covariance maximale négative).",
+      "D. Leur variance individuelle est également proche de zéro (constantes)."
     ],
-    "correct": "B"
+    "correct": "A"
   },
   {
     "id": 15,
     "theme": "Principes fondamentaux",
     "question": "Quel outil mathématique résume les relations entre toutes les variables ?",
     "options": [
-      "A. La matrice d'identité",
-      "B. La matrice de covariance (ou de corrélation)",
-      "C. Le vecteur propre"
+      "A. La matrice d'identité — utilisée quand les variables sont orthonormales.",
+      "B. La matrice de covariance (ou la matrice de corrélation après standardisation).",
+      "C. Le vecteur des moyennes — résume la position centrale mais pas les dépendances.",
+      "D. Le gradient de la fonction de log-vraisemblance — pour l'estimation par maximum."
     ],
     "correct": "B"
   },
@@ -169,9 +184,10 @@
     "theme": "Principes fondamentaux",
     "question": "L'ACP cherche à maximiser :",
     "options": [
-      "A. La distance entre les moyennes",
-      "B. La variance projetée sur les nouveaux axes",
-      "C. Le nombre de zéros dans les données"
+      "A. La somme des covariances entre les nouvelles composantes.",
+      "B. La variance projetée sur chaque nouvel axe, sous contrainte d'orthogonalité.",
+      "C. La corrélation entre les composantes et la variable cible (en version supervisée).",
+      "D. La distance de Mahalanobis entre les centres des classes (comme la LDA)."
     ],
     "correct": "B"
   },
@@ -180,9 +196,10 @@
     "theme": "Principes fondamentaux",
     "question": "Comment sont les axes (composantes) créés par l'ACP entre eux ?",
     "options": [
-      "A. Parallèles",
-      "B. Orthogonaux (non corrélés)",
-      "C. Aléatoires"
+      "A. Parallèles — ils pointent tous dans la direction de la plus grande variance.",
+      "B. Orthogonaux (non corrélés) — chaque composante apporte une information nouvelle et indépendante.",
+      "C. Aléatoires — l'ordre dépend de l'initialisation de l'algorithme itératif.",
+      "D. Obliques — comme en analyse factorielle avec rotation promax."
     ],
     "correct": "B"
   },
@@ -191,9 +208,10 @@
     "theme": "Principes fondamentaux",
     "question": "La première composante principale (PC1) est celle qui :",
     "options": [
-      "A. Explique le moins de variance",
-      "B. Explique la plus grande part de la variance totale",
-      "C. Contient uniquement les valeurs positives"
+      "A. Explique le moins de variance — on la garde souvent en dernier.",
+      "B. Explique la plus grande part de la variance totale du jeu de données.",
+      "C. Contient uniquement les valeurs positives (projection sur le premier axe).",
+      "D. Est la moyenne de toutes les variables centrées (comme le premier facteur)."
     ],
     "correct": "B"
   },
@@ -202,20 +220,22 @@
     "theme": "Principes fondamentaux",
     "question": "La deuxième composante principale (PC2) capture :",
     "options": [
-      "A. La plus grande part de variance restante, perpendiculairement à PC1",
-      "B. La même information que PC1",
-      "C. Uniquement le bruit de fond"
+      "A. La même information que PC1, redondance due à la colinéarité.",
+      "B. La plus grande variance résiduelle, orthogonalement à PC1.",
+      "C. Le bruit de fond résiduel après extraction du signal par PC1.",
+      "D. La corrélation entre PC1 et la variable cible (en contexte supervisé)."
     ],
-    "correct": "A"
+    "correct": "B"
   },
   {
     "id": 20,
     "theme": "Principes fondamentaux",
     "question": "Plus on ajoute de composantes, plus la variance expliquée par chaque nouvel axe :",
     "options": [
-      "A. Augmente",
-      "B. Diminue",
-      "C. Reste constante"
+      "A. Augmente — chaque nouvel axe capture plus de signal que le précédent.",
+      "B. Diminue — les premiers axes captent les directions principales, les suivants le résidu.",
+      "C. Reste constante — toutes les composantes expliquent la même variance par construction.",
+      "D. Oscille — dépend de la structure de corrélation des données."
     ],
     "correct": "B"
   },
@@ -224,9 +244,10 @@
     "theme": "Prétraitement et standardisation",
     "question": "Quelle étape est indispensable avant de calculer l'ACP si les échelles diffèrent ?",
     "options": [
-      "A. La suppression des colonnes",
-      "B. Le centrage et la réduction (standardisation)",
-      "C. L'arrondi des valeurs"
+      "A. La suppression des colonnes constantes (variance nulle) qui bloquent le calcul.",
+      "B. Le centrage et la réduction (standardisation) pour mettre toutes les variables à la même échelle.",
+      "C. L'arrondi des valeurs à 2 décimales pour éviter les erreurs d'arrondi flottant.",
+      "D. La transformation logarithmique pour rendre la distribution plus symétrique."
     ],
     "correct": "B"
   },
@@ -235,31 +256,34 @@
     "theme": "Prétraitement et standardisation",
     "question": "Que signifie 'centrer' les données ?",
     "options": [
-      "A. Soustraire la moyenne à chaque valeur pour avoir une moyenne nulle",
-      "B. Diviser par l'écart-type",
-      "C. Multiplier par 100"
+      "A. Soustraire la médiane à chaque valeur pour avoir une médiane nulle (robuste aux outliers).",
+      "B. Soustraire la moyenne à chaque valeur de la variable pour obtenir une moyenne nulle.",
+      "C. Diviser chaque valeur par l'écart-type pour obtenir une variance unitaire.",
+      "D. Ajouter la constante 1 à toutes les valeurs pour éviter les zéros."
     ],
-    "correct": "A"
+    "correct": "B"
   },
   {
     "id": 23,
     "theme": "Prétraitement et standardisation",
     "question": "Quel est l'objectif de la réduction (division par l'écart-type) ?",
     "options": [
-      "A. Mettre toutes les variables sur une même échelle (éviter l'effet de taille)",
-      "B. Augmenter la variance des petites variables",
-      "C. Supprimer les valeurs négatives"
+      "A. Rendre la distribution parfaitement gaussienne (normalisation de Box-Cox).",
+      "B. Mettre toutes les variables sur une même échelle pour éviter l'effet de dominance des grandes échelles.",
+      "C. Supprimer les valeurs négatives qui posent problème pour certaines transformations.",
+      "D. Réduire l'influence des outliers en écrasant les valeurs extrêmes."
     ],
-    "correct": "A"
+    "correct": "B"
   },
   {
     "id": 24,
     "theme": "Prétraitement et standardisation",
-    "question": "Une fois standardisées, les variables ont :",
+    "question": "Une fois standardisées (centrée-réduite), les variables ont :",
     "options": [
-      "A. Une moyenne de 1 et un écart-type de 0",
-      "B. Une moyenne de 0 et un écart-type de 1",
-      "C. Des valeurs uniquement entre 0 et 1"
+      "A. Une moyenne de 1 et un écart-type de 0 — confusion avec la normalisation par la moyenne.",
+      "B. Une moyenne de 0 et un écart-type de 1 — propriété de la standardisation Z-score.",
+      "C. Des valeurs uniquement comprises entre 0 et 1 — c'est le MinMaxScaler.",
+      "D. Une médiane nulle et un écart interquartile unitaire — c'est la normalisation robuste."
     ],
     "correct": "B"
   },
@@ -268,9 +292,10 @@
     "theme": "Mathématiques de l'ACP",
     "question": "Qu'est-ce qu'une valeur propre (eigenvalue) dans l'ACP ?",
     "options": [
-      "A. La direction d'un axe",
-      "B. La quantité de variance expliquée par une composante",
-      "C. Le nom d'une variable initiale"
+      "A. La direction (vecteur) de la composante principale dans l'espace original.",
+      "B. La quantité de variance expliquée par une composante (somme des carrés projetés).",
+      "C. Le cosinus de l'angle entre la variable et la composante principale.",
+      "D. La corrélation entre la composante et la variable cible (lorsqu'elle existe)."
     ],
     "correct": "B"
   },
@@ -279,9 +304,10 @@
     "theme": "Mathématiques de l'ACP",
     "question": "Qu'est-ce qu'un vecteur propre (eigenvector) ?",
     "options": [
-      "A. La direction ou l'orientation d'un axe principal",
-      "B. Le score d'un individu",
-      "C. La somme des moyennes"
+      "A. La direction ou l'orientation d'un axe principal dans l'espace des variables.",
+      "B. Le score d'un individu projeté sur l'axe principal (coordonnée factorielle).",
+      "C. La variance résiduelle après projection sur l'axe (distance à l'hyperplan).",
+      "D. Le coefficient de corrélation entre une variable et la composante (cosinus carré)."
     ],
     "correct": "A"
   },
@@ -290,9 +316,10 @@
     "theme": "Mathématiques de l'ACP",
     "question": "Le calcul des valeurs et vecteurs propres provient de :",
     "options": [
-      "A. Une simple addition",
-      "B. La décomposition spectrale de la matrice de covariance",
-      "C. Une régression linéaire"
+      "A. La décomposition QR de la matrice des données centrées.",
+      "B. La décomposition spectrale (diagonalisation) de la matrice de covariance.",
+      "C. La factorisation LU résolvant le système d'équations normales.",
+      "D. La descente de gradient stochastique sur la fonction de variance."
     ],
     "correct": "B"
   },
@@ -301,9 +328,10 @@
     "theme": "Mathématiques de l'ACP",
     "question": "La projection des données consiste à :",
     "options": [
-      "A. Transformer les coordonnées initiales dans le nouveau système d'axes",
-      "B. Supprimer les données inutiles",
-      "C. Dessiner les points au hasard"
+      "A. Multiplier la matrice centrée par la matrice des vecteurs propres (changement de repère).",
+      "B. Supprimer les colonnes dont la variance est inférieure au seuil défini.",
+      "C. Normaliser chaque individu pour qu'il ait une norme unité (projection sur la sphère).",
+      "D. Appliquer une transformation logarithmique pour linéariser les relations exponentielles."
     ],
     "correct": "A"
   },
@@ -312,20 +340,22 @@
     "theme": "Mathématiques de l'ACP",
     "question": "Chaque composante principale est une :",
     "options": [
-      "A. Combinaison linéaire des variables d'origine",
-      "B. Combinaison non linéaire (exponentielle)",
-      "C. Sélection aléatoire de variables"
+      "A. Combinaison linéaire des variables d'origine, les coefficients étant les vecteurs propres.",
+      "B. Combinaison non linéaire (via noyau RBF) pour capturer les relations complexes.",
+      "C. Sous-sélection aléatoire de variables, améliorée par bootstrapping.",
+      "D. Moyenne pondérée des variables avec des poids tirés d'une loi uniforme."
     ],
     "correct": "A"
   },
   {
     "id": 30,
     "theme": "Mathématiques de l'ACP",
-    "question": "Si on garde toutes les composantes principales possibles :",
+    "question": "Si on garde toutes les composantes principales possibles (k = nombre de variables initiales) :",
     "options": [
-      "A. On conserve 100 % de l'information (mais sans réduction)",
-      "B. On perd la moitié de l'information",
-      "C. Le calcul est impossible"
+      "A. On conserve 100 % de l'information, mais sans aucune réduction dimensionnelle.",
+      "B. On perd environ 50 % de l'information par le phénomène de projection orthogonale.",
+      "C. Le calcul est impossible car la matrice de covariance est singulière (non inversible).",
+      "D. Les composantes sont parfaitement corrélées entre elles (violation d'orthogonalité)."
     ],
     "correct": "A"
   },
@@ -334,20 +364,22 @@
     "theme": "Évaluation et paramètres",
     "question": "Qu'est-ce que la variance expliquée cumulée ?",
     "options": [
-      "A. La somme des variances expliquées par les premières composantes retenues",
-      "B. Le carré de la moyenne",
-      "C. La différence entre PC1 et PC2"
+      "A. Le produit des variances expliquées par les premières composantes retenues.",
+      "B. La somme des variances expliquées par les premières composantes (de 1 à k).",
+      "C. La différence entre la variance de PC1 et la variance de PCk.",
+      "D. Le rapport entre la plus grande et la plus petite valeur propre."
     ],
-    "correct": "A"
+    "correct": "B"
   },
   {
     "id": 32,
     "theme": "Évaluation et paramètres",
     "question": "Quel graphique permet de choisir le nombre de composantes à retenir ?",
     "options": [
-      "A. L'histogramme des fréquences",
-      "B. Le graphique des éboulis (Scree plot)",
-      "C. La boîte à moustaches (Boxplot)"
+      "A. L'histogramme des fréquences des variables après standardisation.",
+      "B. Le graphique des éboulis (Scree plot) — valeurs propres en ordre décroissant.",
+      "C. La boîte à moustaches (Boxplot) des scores projetés sur les axes.",
+      "D. Le nuage de points des deux premières composantes (biplot)."
     ],
     "correct": "B"
   },
@@ -356,9 +388,10 @@
     "theme": "Évaluation et paramètres",
     "question": "Qu'est-ce que la 'règle du coude' (Elbow rule) ?",
     "options": [
-      "A. Identifier le point où le gain de variance devient marginal",
-      "B. Arrêter l'analyse après 2 composantes quoi qu'il arrive",
-      "C. Garder uniquement les axes avec une valeur propre égale à 0"
+      "A. Choisir le point où le gain marginal de variance devient faible (rupture de pente).",
+      "B. Garder systématiquement les 2 premières composantes quel que soit le contexte.",
+      "C. Conserver les axes dont la valeur propre est inférieure à la moyenne des valeurs propres.",
+      "D. Arrêter quand la variance cumulée dépasse 50 % (seuil arbitraire)."
     ],
     "correct": "A"
   },
@@ -367,9 +400,10 @@
     "theme": "Évaluation et paramètres",
     "question": "Quel seuil de variance cumulée est généralement visé en pratique ?",
     "options": [
-      "A. 10 % à 20 %",
-      "B. 80 % à 95 %",
-      "C. 100 % exactement"
+      "A. 10 % à 20 % — seuil minimal pour éviter le surapprentissage.",
+      "B. 80 % à 95 % — conserver l'essentiel de l'information en réduisant significativement.",
+      "C. 100 % exactement — nécessité de garder toutes les composantes.",
+      "D. 50 % — seuil de la médiane de la variance totale."
     ],
     "correct": "B"
   },
@@ -378,9 +412,10 @@
     "theme": "Évaluation et paramètres",
     "question": "Dans Scikit-Learn, que signifie n_components=0.95 ?",
     "options": [
-      "A. Garder 0,95 composante",
-      "B. Garder assez de composantes pour expliquer 95 % de la variance",
-      "C. Supprimer 95 % des variables"
+      "A. Garder exactement 0,95 composante — ce n'est pas un entier, erreur de paramétrage.",
+      "B. Garder assez de composantes pour expliquer 95 % de la variance totale.",
+      "C. Supprimer 95 % des variables (conserver 5 % des colonnes aléatoires).",
+      "D. Appliquer une ACP sur un sous-échantillon aléatoire de 95 % des données."
     ],
     "correct": "B"
   },
@@ -389,9 +424,10 @@
     "theme": "Caractéristiques de l'ACP",
     "question": "L'ACP est une méthode :",
     "options": [
-      "A. Linéaire",
-      "B. Non linéaire",
-      "C. Manifold (courbe)"
+      "A. Linéaire — elle ne capture que les relations linéaires entre variables.",
+      "B. Non linéaire — elle utilise des noyaux pour projeter en grande dimension.",
+      "C. Manifold (courbe) — elle apprend la variété sous-jacente (comme l'Isomap).",
+      "D. Probabiliste — elle modélise explicitement le bruit comme une distribution gaussienne."
     ],
     "correct": "A"
   },
@@ -400,9 +436,10 @@
     "theme": "Caractéristiques de l'ACP",
     "question": "L'ACP est-elle sensible aux valeurs aberrantes (outliers) ?",
     "options": [
-      "A. Oui, elles peuvent fausser les axes principaux",
-      "B. Non, elle les ignore automatiquement",
-      "C. Uniquement si on ne standardise pas"
+      "A. Oui — les outliers tirent fortement la variance et peuvent fausser les axes.",
+      "B. Non — l'ACP est robuste car elle utilise la moyenne, influencée par les valeurs extrêmes (justement, si — paradoxe).",
+      "C. Uniquement si on ne standardise pas — après standardisation le problème disparaît.",
+      "D. Non, car la matrice de covariance est calculée sur les rangs et non les valeurs."
     ],
     "correct": "A"
   },
@@ -411,20 +448,22 @@
     "theme": "Interprétation",
     "question": "Que représente un 'cercle de corrélation' ?",
     "options": [
-      "A. La qualité de représentation des variables sur les axes",
-      "B. Le nombre d'individus par groupe",
-      "C. La moyenne des erreurs"
+      "A. La qualité de représentation des variables sur le plan factoriel (cos²).",
+      "B. La matrice de corrélation circulaire entre les variables originales.",
+      "C. Le tracé des valeurs propres ordonnées en fonction de leur rang.",
+      "D. La projection des individus sur les deux premières composantes."
     ],
     "correct": "A"
   },
   {
     "id": 39,
     "theme": "Interprétation",
-    "question": "Sur un cercle de corrélation, une variable proche du bord est :",
+    "question": "Sur un cercle de corrélation, une variable proche du bord (rayon proche de 1) est :",
     "options": [
-      "A. Bien représentée par les axes",
-      "B. Très mal représentée",
-      "C. Inutile pour l'analyse"
+      "A. Bien représentée par le plan factoriel (cosinus carré élevé).",
+      "B. Très mal représentée — elle est orthogonale au plan (proche du centre).",
+      "C. Inutile pour l'analyse — sa contribution à l'inertie est nulle.",
+      "D. Parfaitement corrélée négativement avec l'axe horizontal."
     ],
     "correct": "A"
   },
@@ -433,9 +472,10 @@
     "theme": "Interprétation",
     "question": "Deux flèches très proches sur un cercle de corrélation indiquent :",
     "options": [
-      "A. Une forte corrélation positive entre ces variables",
-      "B. Qu'elles sont opposées",
-      "C. Qu'elles n'ont aucun lien"
+      "A. Une forte corrélation positive entre ces deux variables dans le jeu de données.",
+      "B. Qu'elles sont opposées (corrélation négative proche de -1).",
+      "C. Qu'elles n'ont aucun lien linéaire (angle droit, corrélation nulle).",
+      "D. Qu'elles sont parfaitement indépendantes (cosinus nul)."
     ],
     "correct": "A"
   },
@@ -444,9 +484,10 @@
     "theme": "Avantages et limites",
     "question": "Un avantage majeur de l'ACP est :",
     "options": [
-      "A. La suppression du bruit et de la multicolinéarité",
-      "B. L'augmentation de la complexité",
-      "C. Le maintien du nom des variables d'origine sur les axes"
+      "A. La réduction du bruit et de la multicolinéarité — simplification pour les modèles aval.",
+      "B. L'augmentation volontaire de la complexité pour mieux modéliser le bruit.",
+      "C. Le maintien sémantique des noms de variables sur les axes (interprétabilité directe).",
+      "D. La garantie d'améliorer systématiquement les performances prédictives."
     ],
     "correct": "A"
   },
@@ -455,9 +496,10 @@
     "theme": "Avantages et limites",
     "question": "Une limite importante de l'ACP est :",
     "options": [
-      "A. La perte d'interprétabilité sémantique des axes",
-      "B. La lenteur de calcul sur 2 variables",
-      "C. L'obligation de travailler sur des données textuelles"
+      "A. La perte d'interprétabilité sémantique — les composantes combinent linéairement les variables originales.",
+      "B. La lenteur de calcul sur des datasets à 2 variables (overkill inutile).",
+      "C. L'impossibilité de traiter des données avec plus de 1000 lignes (explosion mémoire).",
+      "D. L'obligation d'avoir une variable cible pour définir les axes de projection."
     ],
     "correct": "A"
   },
@@ -466,9 +508,10 @@
     "theme": "Avantages et limites",
     "question": "L'ACP est-elle adaptée aux relations non linéaires complexes ?",
     "options": [
-      "A. Oui, c'est sa force principale",
-      "B. Non, elle ne capture que les relations linéaires",
-      "C. Uniquement si on utilise 3 composantes"
+      "A. Oui, c'est sa force principale — les composantes non linéaires capturent les interactions.",
+      "B. Non, elle ne capture que les dépendances linéaires (covariance/corrélation).",
+      "C. Oui, à condition d'utiliser un seuil de variance cumulée supérieur à 90 %.",
+      "D. Uniquement si on applique un noyau RBF avant l'ACP (kernel PCA)."
     ],
     "correct": "B"
   },
@@ -477,20 +520,22 @@
     "theme": "Alternatives",
     "question": "Quelle méthode est une alternative non linéaire à l'ACP pour la visualisation ?",
     "options": [
-      "A. La régression linéaire",
-      "B. t-SNE ou UMAP",
-      "C. La LDA"
+      "A. La régression linéaire multiple — projection sur la variable cible.",
+      "B. t-SNE ou UMAP — méthodes de réduction basées sur les voisinages locaux.",
+      "C. L'analyse discriminante linéaire (LDA) — projection supervisée par les classes.",
+      "D. Le clustering hiérarchique — dendrogramme des similarités entre individus."
     ],
     "correct": "B"
   },
   {
     "id": 45,
     "theme": "Comparaisons",
-    "question": "Quelle est la différence entre ACP et LDA ?",
+    "question": "Quelle est la différence entre ACP et LDA (Analyse Discriminante Linéaire) ?",
     "options": [
-      "A. L'ACP est non supervisée, la LDA est supervisée (utilise les classes)",
-      "B. L'ACP est plus complexe mathématiquement",
-      "C. Il n'y a aucune différence"
+      "A. L'ACP maximise la variance globale (non supervisée), la LDA maximise la séparation entre classes connues (supervisée).",
+      "B. L'ACP est plus complexe mathématiquement (décomposition spectrale vs résolution de système).",
+      "C. La LDA projette sur des axes orthogonaux, l'ACP peut utiliser des rotations obliques.",
+      "D. L'ACP nécessite des données gaussiennes, la LDA fonctionne sur toute distribution."
     ],
     "correct": "A"
   },
@@ -499,9 +544,10 @@
     "theme": "Applications",
     "question": "Peut-on intégrer des variables qualitatives (catégorielles) dans une ACP ?",
     "options": [
-      "A. Oui, en les ajoutant comme variables supplémentaires illustratives",
-      "B. Non, c'est strictement impossible",
-      "C. Oui, en les multipliant par la moyenne"
+      "A. Oui, en les transformant en variables indicatrices binaires (dummy encoding) comme variables supplémentaires.",
+      "B. Non, l'ACP suppose des variables quantitatives continues (impossible pour les catégories).",
+      "C. Oui, directement en les codant avec des lettres A, B, C (converties implicitement en entiers).",
+      "D. Non, même après One-Hot Encoding, la matrice de covariance n'est pas définie."
     ],
     "correct": "A"
   },
@@ -510,9 +556,10 @@
     "theme": "Applications",
     "question": "L'ACP permet-elle de détecter des groupes (clusters) naturels ?",
     "options": [
-      "A. Oui, indirectement en projetant les données",
-      "B. Non, c'est impossible",
-      "C. Uniquement pour des données binaires"
+      "A. Indirectement — la projection sur les premiers axes peut révéler des structures de groupes visuellement.",
+      "B. Directement — l'ACP est un algorithme de clustering à part entière (comme k-means).",
+      "C. Non — l'ACP est une méthode de réduction, pas de classification non supervisée.",
+      "D. Oui, car elle minimise la distance intra-groupe comme les centres mobiles."
     ],
     "correct": "A"
   },
@@ -521,9 +568,10 @@
     "theme": "Applications",
     "question": "Comment l'ACP aide-t-elle le stockage des données ?",
     "options": [
-      "A. En réduisant l'espace nécessaire (moins de colonnes)",
-      "B. En compressant les fichiers .zip",
-      "C. En supprimant les doublons d'individus"
+      "A. En réduisant le nombre de colonnes nécessaires pour représenter l'essentiel de la variance.",
+      "B. En compressant les données au format ZIP via un dictionnaire de projection.",
+      "C. En supprimant les lignes dupliquées identifiées par leurs projections.",
+      "D. En convertissant les flottants en entiers 8 bits après quantification."
     ],
     "correct": "A"
   },
@@ -532,9 +580,10 @@
     "theme": "Géométrie",
     "question": "Géométriquement, l'ACP correspond à :",
     "options": [
-      "A. Une rotation des axes du repère initial",
-      "B. Une translation des points vers le haut",
-      "C. Un zoom sur les valeurs centrales"
+      "A. Une translation des points vers l'origine (centrage) suivie d'une rotation orthogonale du repère.",
+      "B. Une homothétie qui dilate l'espace selon la matrice de covariance.",
+      "C. Une projection stéréographique sur une sphère de dimension inférieure.",
+      "D. Une déformation non linéaire qui aplatit la variété sous-jacente."
     ],
     "correct": "A"
   },
@@ -543,9 +592,10 @@
     "theme": "Conclusion",
     "question": "En conclusion, l'ACP est un compromis entre :",
     "options": [
-      "A. Simplification du modèle et perte d'information",
-      "B. Nombre de lignes et nombre de colonnes",
-      "C. Vitesse de calcul et précision du clavier"
+      "A. La simplification du modèle (moins de dimensions) et la perte inévitable d'information.",
+      "B. Le nombre de lignes et le nombre de colonnes du jeu de données initial.",
+      "C. La vitesse de calcul et la précision numérique des algorithmes de décomposition.",
+      "D. L'interprétabilité des composantes et leur capacité prédictive (trade-off biais-variance)."
     ],
     "correct": "A"
   }
