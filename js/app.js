@@ -348,7 +348,7 @@ function renderCurrentQuestion() {
 
 // Génère le HTML d'une carte question
 function buildQuestionCardHtml(question, index, isSingleMode) {
-  const isMulti = Array.isArray(question.correct);
+  const isMulti = Array.isArray(question.correct) && question.correct.length > 1;
   const userAns = state.userAnswers[question.id] || [];
   
   // Rendu des options
@@ -603,12 +603,13 @@ function submitQuiz(isAuto = false) {
     const user = state.userAnswers[q.id] || [];
     
     let isCorrect = false;
-    if (Array.isArray(expected)) {
-      // Choix multiple : comparaison stricte des ensembles
+    if (Array.isArray(expected) && expected.length > 1) {
+      // Vrai choix multiple : comparaison stricte des ensembles
       isCorrect = expected.length === user.length && expected.every(opt => user.includes(opt));
     } else {
-      // Choix unique
-      isCorrect = user.length === 1 && user[0] === expected;
+      // Choix unique (string ou tableau à 1 seul élément)
+      const expectedKey = Array.isArray(expected) ? expected[0] : expected;
+      isCorrect = user.length === 1 && user[0] === expectedKey;
     }
     
     if (isCorrect) scoreValue++;
@@ -727,10 +728,11 @@ function renderReviewList(filter = 'all') {
     
     // Évaluer l'état
     let isCorrect = false;
-    if (Array.isArray(expected)) {
+    if (Array.isArray(expected) && expected.length > 1) {
       isCorrect = expected.length === user.length && expected.every(opt => user.includes(opt));
     } else {
-      isCorrect = user.length === 1 && user[0] === expected;
+      const expectedKey = Array.isArray(expected) ? expected[0] : expected;
+      isCorrect = user.length === 1 && user[0] === expectedKey;
     }
     
     const isUnanswered = user.length === 0;
@@ -744,9 +746,14 @@ function renderReviewList(filter = 'all') {
     
     // Construction des options de revue
     let optionsHtml = '';
+    const isMultiReview = Array.isArray(expected) && expected.length > 1;
+    const indicatorRadiusClass = isMultiReview ? 'rounded' : 'rounded-full';
+    
     q.options.forEach(opt => {
       const key = getOptionKey(opt);
-      const isExpected = Array.isArray(expected) ? expected.includes(key) : expected === key;
+      // Normalisation : ["B"] est traité comme "B" pour la comparaison
+      const expectedKey = Array.isArray(expected) && expected.length === 1 ? expected[0] : expected;
+      const isExpected = Array.isArray(expectedKey) ? expectedKey.includes(key) : expectedKey === key;
       const isSelected = user.includes(key);
       
       let optBorderClass = 'border-slate-800 bg-slate-950/20';
@@ -766,10 +773,10 @@ function renderReviewList(filter = 'all') {
         badgeIcon = '<span class="text-emerald-500 font-bold ml-auto flex items-center gap-1 text-xs">✓ Correct</span>';
       }
       
-      // Petit checkmark si coché
+      // Petit checkmark si coché (cercle pour choix unique, carré pour choix multiple)
       const checkIndicator = isSelected 
-        ? `<div class="w-4 h-4 rounded flex items-center justify-center text-xs text-white ${isExpected ? 'bg-emerald-500' : 'bg-red-500'}">✓</div>`
-        : `<div class="w-4 h-4 rounded border ${isExpected ? 'border-emerald-500' : 'border-slate-700'}"></div>`;
+        ? `<div class="w-4 h-4 ${indicatorRadiusClass} flex items-center justify-center text-xs text-white ${isExpected ? 'bg-emerald-500' : 'bg-red-500'}">✓</div>`
+        : `<div class="w-4 h-4 ${indicatorRadiusClass} border ${isExpected ? 'border-emerald-500' : 'border-slate-700'}"></div>`;
       
       optionsHtml += `
         <div class="flex items-start gap-4 p-4 rounded-xl border ${optBorderClass}">
@@ -856,10 +863,11 @@ function triggerRemediation() {
     const expected = q.correct;
     const user = state.userAnswers[q.id] || [];
     
-    if (Array.isArray(expected)) {
+    if (Array.isArray(expected) && expected.length > 1) {
       return !(expected.length === user.length && expected.every(opt => user.includes(opt)));
     } else {
-      return !(user.length === 1 && user[0] === expected);
+      const expectedKey = Array.isArray(expected) ? expected[0] : expected;
+      return !(user.length === 1 && user[0] === expectedKey);
     }
   });
   
