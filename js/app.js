@@ -197,36 +197,8 @@ async function startUltimateQuiz() {
       // Sélection des N premières questions
       const selected = pool.slice(0, countToDraw);
       
-      // Préparation individuelle de chaque question (mélange des options)
-      const preparedSelected = selected.map(q => {
-        const parsedOptions = q.options.map(opt => {
-          const parsed = parseOption(opt);
-          const isCorrect = Array.isArray(q.correct)
-            ? q.correct.includes(parsed.key)
-            : q.correct === parsed.key;
-          return { text: parsed.text, isCorrect };
-        });
-        
-        shuffleArray(parsedOptions);
-        
-        const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-        const newOptions = [];
-        const newCorrect = [];
-        
-        parsedOptions.forEach((opt, idx) => {
-          const letter = alphabet[idx] || String.fromCharCode(65 + idx);
-          newOptions.push(`${letter}. ${opt.text}`);
-          if (opt.isCorrect) {
-            newCorrect.push(letter);
-          }
-        });
-        
-        return {
-          ...q,
-          options: newOptions,
-          correct: Array.isArray(q.correct) ? newCorrect : (newCorrect[0] || '')
-        };
-      });
+      // Préparation individuelle de chaque question (mélange des options avec détection des dépendances)
+      const preparedSelected = selected.map(q => prepareQuestionOptions(q));
       
       ultimateQuestions.push(...preparedSelected);
     });
@@ -1009,43 +981,69 @@ function parseOption(optionStr) {
 }
 
 /**
+ * Détermine si les options d'une question peuvent être mélangées.
+ * Renvoie false si les choix de réponse contiennent des références croisées ("A et B", "ci-dessus", etc.).
+ */
+function shouldShuffleOptions(question) {
+  // Regex élargi pour détecter les options dépendantes de l'ordre ou croisées
+  const pattern = /(ci-dessus|ci-dessous|toutes les|aucune de|aucune des|les deux|propositions| propositions|les propositions|A et |A ou |B et |B ou|C et |C ou|les choix)/i;
+  return !question.options.some(opt => pattern.test(opt));
+}
+
+/**
+ * Prépare une question individuelle :
+ * - Soit en mélangeant ses options s'il n'y a pas d'incohérence logique.
+ * - Soit en gardant l'ordre original pour préserver la validité (ex: "A et C sont corrects").
+ */
+function prepareQuestionOptions(q) {
+  if (!shouldShuffleOptions(q)) {
+    // Renvoyer une copie intacte pour préserver la cohérence des choix dépendants
+    return {
+      ...q,
+      options: [...q.options],
+      correct: Array.isArray(q.correct) ? [...q.correct] : q.correct
+    };
+  }
+
+  // Parser les options et évaluer si elles sont correctes
+  const parsedOptions = q.options.map(opt => {
+    const parsed = parseOption(opt);
+    const isCorrect = Array.isArray(q.correct)
+      ? q.correct.includes(parsed.key)
+      : q.correct === parsed.key;
+    return { text: parsed.text, isCorrect };
+  });
+  
+  // Mélanger les options
+  shuffleArray(parsedOptions);
+  
+  // Reconstruire les options avec de nouvelles lettres et réponses correctes
+  const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  const newOptions = [];
+  const newCorrect = [];
+  
+  parsedOptions.forEach((opt, idx) => {
+    const letter = alphabet[idx] || String.fromCharCode(65 + idx);
+    newOptions.push(`${letter}. ${opt.text}`);
+    if (opt.isCorrect) {
+      newCorrect.push(letter);
+    }
+  });
+  
+  return {
+    ...q,
+    options: newOptions,
+    correct: Array.isArray(q.correct) ? newCorrect : (newCorrect[0] || '')
+  };
+}
+
+/**
  * Prépare et mélange le quiz :
- * 1. Mélange les options de chaque question et réajuste la/les bonne(s) réponse(s).
+ * 1. Mélange (ou préserve) les options de chaque question et réajuste la/les bonne(s) réponse(s).
  * 2. Mélange l'ordre global des questions.
  */
 function prepareAndShuffleQuiz(questions) {
-  const copiedQuestions = questions.map(q => {
-    // Parser les options et évaluer si elles sont correctes
-    const parsedOptions = q.options.map(opt => {
-      const parsed = parseOption(opt);
-      const isCorrect = Array.isArray(q.correct)
-        ? q.correct.includes(parsed.key)
-        : q.correct === parsed.key;
-      return { text: parsed.text, isCorrect };
-    });
-    
-    // Mélanger les options
-    shuffleArray(parsedOptions);
-    
-    // Reconstruire les options avec de nouvelles lettres et les nouvelles clés de réponses correctes
-    const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    const newOptions = [];
-    const newCorrect = [];
-    
-    parsedOptions.forEach((opt, idx) => {
-      const letter = alphabet[idx] || String.fromCharCode(65 + idx);
-      newOptions.push(`${letter}. ${opt.text}`);
-      if (opt.isCorrect) {
-        newCorrect.push(letter);
-      }
-    });
-    
-    return {
-      ...q,
-      options: newOptions,
-      correct: Array.isArray(q.correct) ? newCorrect : (newCorrect[0] || '')
-    };
-  });
+  const copiedQuestions = questions.map(q => prepareQuestionOptions(q));
   
   // Mélanger l'ordre des questions elles-mêmes
   shuffleArray(copiedQuestions);
